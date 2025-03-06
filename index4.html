@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шпаргалка по тестированию</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #444;
+        }
+        .question {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #eef;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .answer {
+            margin-top: 5px;
+            padding: 10px;
+            background-color: #f9f9ff;
+            border-radius: 5px;
+            display: none; /* Скрыть ответ по умолчанию */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Шпаргалка по теории тестирования</h1>
+
+<!-- Блок 10: Самое важное -->
+<h2>Самое важное</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Вопросы</div>
+<div class="answer">
+    
+<h2>Основы тестирования</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование (Testing)?</div>
+<div class="answer">Тестирование (Testing) — это процесс проверки продукта на соответствие требованиям, выявление дефектов и обеспечение качества.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Какие виды Тестирования (Testing) существуют?</div>
+<div class="answer">Основные виды: Функциональное тестирование (Functional Testing), Нефункциональное тестирование (Non-functional Testing), Ручное тестирование (Manual Testing), Автоматизированное тестирование (Automation Testing).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Black-box тестирование?</div>
+<div class="answer">Black-box тестирование — метод тестирования, при котором тестировщик не имеет доступа к исходному коду и работает только через интерфейс.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое White-box тестирование?</div>
+<div class="answer">White-box тестирование — метод тестирования, при котором тестировщик имеет доступ к исходному коду и может проверять внутреннюю логику программы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Smoke-тестирование?</div>
+<div class="answer">Smoke-тестирование — быстрая проверка основных функций системы после установки или обновления.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Regression-тестирование?</div>
+<div class="answer">Regression-тестирование — повторное тестирование после внесения изменений для проверки отсутствия новых ошибок.</div>
+
+<h2>Техники тест-дизайна</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование граничных значений (Boundary Value Analysis)?</div>
+<div class="answer">Тестирование граничных значений (Boundary Value Analysis) — метод тестирования, при котором проверяются значения на границах допустимых диапазонов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Эквивалентное разделение (Equivalence Partitioning)?</div>
+<div class="answer">Эквивалентное разделение (Equivalence Partitioning) — метод тестирования, при котором входные данные делятся на классы эквивалентности.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Error Guessing?</div>
+<div class="answer">Error Guessing — метод тестирования, при котором тестировщик предполагает возможные ошибки и создает тест-кейсы для их проверки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Decision Table Testing?</div>
+<div class="answer">Decision Table Testing — метод тестирования, основанный на анализе таблиц решений, где определяются правила и условия.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое State Transition Testing?</div>
+<div class="answer">State Transition Testing — метод тестирования, при котором проверяются переходы между состояниями системы.</div>
+
+<h2>Методы тестирования</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Функциональное тестирование (Functional Testing)?</div>
+<div class="answer">Функциональное тестирование (Functional Testing) — проверка того, что система выполняет свои функции в соответствии с требованиями.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Нефункциональное тестирование (Non-functional Testing)?</div>
+<div class="answer">Нефункциональное тестирование (Non-functional Testing) — проверка характеристик системы, таких как производительность, безопасность, совместимость.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Ручное тестирование (Manual Testing)?</div>
+<div class="answer">Ручное тестирование (Manual Testing) — тестирование, проводимое вручную без использования автоматизации.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Автоматизированное тестирование (Automation Testing)?</div>
+<div class="answer">Автоматизированное тестирование (Automation Testing) — тестирование, проводимое с помощью специальных инструментов и скриптов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Performance Testing?</div>
+<div class="answer">Performance Testing — проверка скорости, стабильности и эффективности работы системы.</div>
+
+<h2>Баг-репорты и документация</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Баг-репорт (Bug Report)?</div>
+<div class="answer">Баг-репорт (Bug Report) — документ, описывающий найденный дефект, включая шаги воспроизведения, фактический и ожидаемый результаты.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Какие элементы должны быть в Баг-репорте (Bug Report)?</div>
+<div class="answer">ID бага, описание, предусловия, шаги воспроизведения, фактический результат, ожидаемый результат, окружение, уровень критичности.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тест-план (Test Plan)?</div>
+<div class="answer">Тест-план (Test Plan) — документ, содержащий описание цели, области покрытия, рисков, ресурсов и сроков тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Test Case?</div>
+<div class="answer">Test Case — набор шагов, входных данных и ожидаемых результатов для проверки конкретной функции.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Матрица трассировки (Traceability Matrix)?</div>
+<div class="answer">Матрица трассировки (Traceability Matrix) — матрица, связывающая требования с тест-кейсами для оценки покрытия.</div>
+
+<h2>Автоматизация тестирования</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Зачем нужна Автоматизация тестирования (Automation Testing)?</div>
+<div class="answer">Для увеличения скорости и точности тестирования, особенно для повторяющихся задач.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Selenium?</div>
+<div class="answer">Selenium — инструмент для автоматизации тестирования веб-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Cypress?</div>
+<div class="answer">Cypress — современный инструмент для автоматизации тестирования веб-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое JUnit?</div>
+<div class="answer">JUnit — фреймворк для написания unit-тестов на Java.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое PyTest?</div>
+<div class="answer">PyTest — фреймворк для написания тестов на Python.</div>
+
+<h2>Тестирование безопасности</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое SQL-инъекция (SQL Injection)?</div>
+<div class="answer">SQL-инъекция (SQL Injection) — атака, при которой злоумышленник вводит вредоносный SQL-код через пользовательский ввод.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое XSS-атака (Cross-Site Scripting)?</div>
+<div class="answer">XSS-атака (Cross-Site Scripting) — атака, при которой злоумышленник внедряет вредоносный JavaScript-код в веб-страницу.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое CSRF-атака (Cross-Site Request Forgery)?</div>
+<div class="answer">CSRF-атака (Cross-Site Request Forgery) — атака, при которой злоумышленник заставляет пользователя выполнить нежелательное действие.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое OWASP Top 10?</div>
+<div class="answer">OWASP Top 10 — список наиболее распространенных уязвимостей веб-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Authorization (Авторизация)?</div>
+<div class="answer">Authorization (Авторизация) — процесс определения прав доступа пользователя.</div>
+
+<h2>Тестирование производительности</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Performance Testing?</div>
+<div class="answer">Performance Testing — проверка скорости, стабильности и эффективности работы системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Load Testing?</div>
+<div class="answer">Load Testing — проверка работы системы под высокой нагрузкой.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Stress Testing?</div>
+<div class="answer">Stress Testing — проверка поведения системы в экстремальных условиях (например, при перегрузке).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Scalability Testing?</div>
+<div class="answer">Scalability Testing — проверка способности системы работать с увеличением нагрузки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Response Time Testing (Тестирование времени отклика)?</div>
+<div class="answer">Response Time Testing (Тестирование времени отклика) — проверка времени, необходимого системе для ответа на запрос.</div>
+
+
+
+
+
+<h2>Agile-практики</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Agile?</div>
+<div class="answer">Agile — гибкая методология разработки, основанная на итеративном подходе.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Scrum?</div>
+<div class="answer">Scrum — методология управления проектами, основанная на коротких спринтах (обычно 2 недели).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое User Story?</div>
+<div class="answer">User Story — описание функциональности с точки зрения пользователя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Sprint?</div>
+<div class="answer">Sprint — короткий временной интервал (обычно 1–4 недели), в течение которого выполняется работа над задачами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Daily Standup?</div>
+<div class="answer">Daily Standup — короткая встреча команды для обсуждения прогресса и проблем.</div>
+
+<h2>Инструменты тестирования</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Jira?</div>
+<div class="answer">Jira — система управления задачами и проектами, часто используемая для трекинга багов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TestRail?</div>
+<div class="answer">TestRail — инструмент для управления тест-кейсами и отчетностью.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Postman?</div>
+<div class="answer">Postman — инструмент для тестирования API.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое JMeter?</div>
+<div class="answer">JMeter — инструмент для нагрузочного тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Allure Report?</div>
+<div class="answer">Allure Report — инструмент для создания красивых отчетов о результатах автоматизированных тестов.</div>
+
+<h2>Разное</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Test Pyramid?</div>
+<div class="answer">Test Pyramid — модель, показывающая соотношение различных типов тестов (юнит-, интеграционных, UI-тестов).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое CI/CD?</div>
+<div class="answer">CI/CD — Continuous Integration/Continuous Deployment, процессы автоматической сборки и деплоя приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое BDD (Behavior Driven Development)?</div>
+<div class="answer">BDD (Behavior Driven Development) — методология разработки, основанная на описании поведения системы через примеры.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TDD (Test Driven Development)?</div>
+<div class="answer">TDD (Test Driven Development) — методология разработки, при которой сначала пишутся тесты, а затем код.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Page Object Model (POM)?</div>
+<div class="answer">Page Object Model (POM) — паттерн проектирования для организации автоматизированных тестов веб-приложений.</div>
+
+</div>
+
+<!-- Блок: Основы тестирования -->
+<h2>Основы тестирования</h2>
+<div class="question" onclick="toggleAnswer(this)">Вопросы</div>
+<div class="answer">
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование (Testing)?</div>
+<div class="answer">Тестирование (Testing) — это процесс проверки продукта на соответствие требованиям, выявление дефектов и обеспечение качества.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Какие виды Тестирования (Testing) существуют?</div>
+<div class="answer">Основные виды: Функциональное тестирование (Functional Testing), Нефункциональное тестирование (Non-functional Testing), Автоматизированное тестирование (Automation Testing), Ручное тестирование (Manual Testing), Регрессионное тестирование (Regression Testing), Нагрузочное тестирование (Load Testing), Стрессовое тестирование (Stress Testing).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Чёрный ящик (Black-box) тестирование?</div>
+<div class="answer">Чёрный ящик (Black-box) тестирование — метод тестирования, при котором тестировщик не имеет доступа к исходному коду и работает только через интерфейс.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Белый ящик (White-box) тестирование?</div>
+<div class="answer">Белый ящик (White-box) тестирование — метод тестирования, при котором тестировщик имеет доступ к исходному коду и может проверять внутреннюю логику программы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Курение (Smoke) тестирование?</div>
+<div class="answer">Курение (Smoke) тестирование — быстрая проверка основных функций системы после установки или обновления.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Регрессионное (Regression) тестирование?</div>
+<div class="answer">Регрессионное (Regression) тестирование — повторное тестирование после внесения изменений для проверки отсутствия новых ошибок.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Альфа (Alpha) тестирование?</div>
+<div class="answer">Альфа (Alpha) тестирование — внутреннее тестирование продукта внутри команды разработчиков или тестировщиков.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Бета (Beta) тестирование?</div>
+<div class="answer">Бета (Beta) тестирование — тестирование продукта реальными пользователями за пределами компании-разработчика.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Ad-hoc тестирование?</div>
+<div class="answer">Ad-hoc тестирование — неподготовленное тестирование без предварительного планирования, основанное на интуиции тестировщика.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Исследовательское (Exploratory) тестирование?</div>
+<div class="answer">Исследовательское (Exploratory) тестирование — метод тестирования, при котором тестировщик одновременно изучает систему и проводит тесты.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тест-кейс (Test Case)?</div>
+<div class="answer">Тест-кейс (Test Case) — набор шагов, входных данных и ожидаемых результатов для проверки конкретной функции.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тест-план (Test Plan)?</div>
+<div class="answer">Тест-план (Test Plan) — документ, содержащий описание цели, области покрытия, рисков, ресурсов и сроков тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тест-сценарий (Test Scenario)?</div>
+<div class="answer">Тест-сценарий (Test Scenario) — краткое описание сценария тестирования, обычно без детальных шагов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Набор тестов (Test Suite)?</div>
+<div class="answer">Набор тестов (Test Suite) — группа связанных Тест-кейсов (Test Cases), предназначенная для тестирования определенной функциональности.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Отчет о дефекте (Bug Report)?</div>
+<div class="answer">Отчет о дефекте (Bug Report) — документ, описывающий найденный дефект, включая шаги воспроизведения, фактический и ожидаемый результаты.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Какие уровни критичности дефектов (Defect Levels) существуют?</div>
+<div class="answer">Blocker, Critical, Major, Minor, Trivial.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Плотность дефектов (Defect Density)?</div>
+<div class="answer">Плотность дефектов (Defect Density) — количество дефектов на единицу кода или функционала.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Покрытие кода (Code Coverage)?</div>
+<div class="answer">Покрытие кода (Code Coverage) — метрика, показывающая, какая часть кода была протестирована.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Покрытие требований (Requirements Coverage)?</div>
+<div class="answer">Покрытие требований (Requirements Coverage) — метрика, показывающая, насколько хорошо тесты покрывают требования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Покрытие рисков (Risk Coverage)?</div>
+<div class="answer">Покрытие рисков (Risk Coverage) — метрика, показывающая, насколько хорошо тесты покрывают потенциальные риски.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестовая среда (Test Environment)?</div>
+<div class="answer">Тестовая среда (Test Environment) — среда, где проводится тестирование (например, тестовый сервер, базы данных).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестовые данные (Test Data)?</div>
+<div class="answer">Тестовые данные (Test Data) — данные, используемые для тестирования (например, входные параметры, начальные состояния).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Статическое (Static) тестирование?</div>
+<div class="answer">Статическое (Static) тестирование — анализ кода или документации без выполнения программы (например, code review).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Динамическое (Dynamic) тестирование?</div>
+<div class="answer">Динамическое (Dynamic) тестирование — тестирование, выполняемое во время выполнения программы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Функциональное (Functional) тестирование?</div>
+<div class="answer">Функциональное (Functional) тестирование — проверка того, что система выполняет свои функции в соответствии с требованиями.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Нефункциональное (Non-functional) тестирование?</div>
+<div class="answer">Нефункциональное (Non-functional) тестирование — проверка характеристик системы, таких как производительность, безопасность, совместимость.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование удобства использования (Usability Testing)?</div>
+<div class="answer">Тестирование удобства использования (Usability Testing) — проверка удобства использования продукта для конечных пользователей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование совместимости (Compatibility Testing)?</div>
+<div class="answer">Тестирование совместимости (Compatibility Testing) — проверка работы системы на разных платформах, устройствах и версиях ПО.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование производительности (Performance Testing)?</div>
+<div class="answer">Тестирование производительности (Performance Testing) — проверка скорости, стабильности и эффективности работы системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Нагрузочное (Load) тестирование?</div>
+<div class="answer">Нагрузочное (Load) тестирование — проверка работы системы под высокой нагрузкой.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Стрессовое (Stress) тестирование?</div>
+<div class="answer">Стрессовое (Stress) тестирование — проверка поведения системы в экстремальных условиях (например, при перегрузке).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование безопасности (Security Testing)?</div>
+<div class="answer">Тестирование безопасности (Security Testing) — проверка защиты системы от угроз (например, SQL-инъекций, XSS).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование доступности (Accessibility Testing)?</div>
+<div class="answer">Тестирование доступности (Accessibility Testing) — проверка доступности продукта для людей с ограниченными возможностями.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Кросс-браузерное (Cross-browser) тестирование?</div>
+<div class="answer">Кросс-браузерное (Cross-browser) тестирование — проверка работоспособности веб-приложения в разных браузерах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Кросс-платформенное (Cross-platform) тестирование?</div>
+<div class="answer">Кросс-платформенное (Cross-platform) тестирование — проверка работоспособности приложения на разных операционных системах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Ручное (Manual) тестирование?</div>
+<div class="answer">Ручное (Manual) тестирование — тестирование, проводимое вручную без использования автоматизации.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Автоматизированное (Automation) тестирование?</div>
+<div class="answer">Автоматизированное (Automation) тестирование — тестирование, проводимое с помощью специальных инструментов и скриптов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Выполнение тестов (Test Execution)?</div>
+<div class="answer">Выполнение тестов (Test Execution) — процесс выполнения тестов для проверки функциональности системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Проектирование тестов (Test Design)?</div>
+<div class="answer">Проектирование тестов (Test Design) — процесс создания тест-кейсов и определения стратегии тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Стратегия тестирования (Test Strategy)?</div>
+<div class="answer">Стратегия тестирования (Test Strategy) — общий подход к тестированию, определяемый на уровне проекта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Метрики тестирования (Test Metrics)?</div>
+<div class="answer">Метрики тестирования (Test Metrics) — метрики, используемые для оценки качества тестирования (например, покрытие кода, количество багов).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Закрытие тестирования (Test Closure Activities)?</div>
+<div class="answer">Закрытие тестирования (Test Closure Activities) — действия, выполняемые после завершения тестирования (например, анализ результатов, составление отчетов).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Входные критерии (Entry Criteria)?</div>
+<div class="answer">Входные критерии (Entry Criteria) — условия, которые должны быть выполнены перед началом тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Выходные критерии (Exit Criteria)?</div>
+<div class="answer">Выходные критерии (Exit Criteria) — условия, которые должны быть выполнены для завершения тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Артефакты тестирования (Test Deliverables)?</div>
+<div class="answer">Артефакты тестирования (Test Deliverables) — артефакты, создаваемые во время тестирования (например, тест-кейсы, баг-репорты, отчеты).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Приоритизация тестов (Test Prioritization)?</div>
+<div class="answer">Приоритизация тестов (Test Prioritization) — процесс определения важности тестов для их выполнения в порядке приоритета.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Оценка тестов (Test Estimation)?</div>
+<div class="answer">Оценка тестов (Test Estimation) — оценка времени и ресурсов, необходимых для тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Оракулы тестирования (Test Oracles)?</div>
+<div class="answer">Оракулы тестирования (Test Oracles) — источники информации, используемые для определения правильности работы системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Инструменты тестирования (Test Tools)?</div>
+<div class="answer">Инструменты тестирования (Test Tools) — инструменты, используемые для автоматизации и упрощения тестирования (например, Selenium, JMeter).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Фреймворк тестирования (Test Framework)?</div>
+<div class="answer">Фреймворк тестирования (Test Framework) — набор инструментов и практик, используемых для организации тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Пирамида тестирования (Test Pyramid)?</div>
+<div class="answer">Пирамида тестирования (Test Pyramid) — модель, показывающая соотношение различных типов тестов (юнит-, интеграционных, UI-тестов).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Жизненный цикл тестирования (Test Life Cycle)?</div>
+<div class="answer">Жизненный цикл тестирования (Test Life Cycle) — жизненный цикл тестирования, включающий этапы: планирование, подготовку, выполнение, анализ и закрытие.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Инструмент управления тест-кейсами (Test Case Management Tool)?</div>
+<div class="answer">Инструмент управления тест-кейсами (Test Case Management Tool) — инструмент для управления тест-кейсами (например, TestRail, Zephyr).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Матрица трассировки (Test Traceability Matrix)?</div>
+<div class="answer">Матрица трассировки (Test Traceability Matrix) — матрица, связывающая требования с тест-кейсами для оценки покрытия.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Отчетность по тестам (Test Reporting)?</div>
+<div class="answer">Отчетность по тестам (Test Reporting) — процесс создания отчетов о результатах тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Отчет о закрытии тестирования (Test Closure Report)?</div>
+<div class="answer">Отчет о закрытии тестирования (Test Closure Report) — отчет, описывающий результаты тестирования и выводы по его завершении.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Повторное тестирование (Retesting)?</div>
+<div class="answer">Повторное тестирование (Retesting) — повторное тестирование для проверки исправления найденных дефектов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Проверка (Verification)?</div>
+<div class="answer">Проверка (Verification) — проверка соответствия продукта требованиям до его реализации.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Подтверждение (Validation)?</div>
+<div class="answer">Подтверждение (Validation) — проверка того, что продукт удовлетворяет потребностям пользователя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Объем тестирования (Test Effort)?</div>
+<div class="answer">Объем тестирования (Test Effort) — объем работы, требуемый для выполнения тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Область тестирования (Test Scope)?</div>
+<div class="answer">Область тестирования (Test Scope) — область, которая должна быть протестирована.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Цель тестирования (Test Objective)?</div>
+<div class="answer">Цель тестирования (Test Objective) — цель тестирования, которую необходимо достичь.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Риск тестирования (Test Risk)?</div>
+<div class="answer">Риск тестирования (Test Risk) — вероятность возникновения проблем, связанных с качеством продукта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Артефакты тестирования (Test Artifacts)?</div>
+<div class="answer">Артефакты тестирования (Test Artifacts) — любой документ или файл, созданный во время тестирования (например, тест-кейсы, баг-репорты).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Независимость тестирования (Test Independence)?</div>
+<div class="answer">Независимость тестирования (Test Independence) — степень независимости тестировщика от разработчиков для объективной оценки качества продукта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Переиспользование тестов (Test Reusability)?</div>
+<div class="answer">Переиспользование тестов (Test Reusability) — возможность использовать тесты повторно для разных версий продукта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Поддержание тестов (Test Maintenance)?</div>
+<div class="answer">Поддержание тестов (Test Maintenance) — поддержание актуальности тестов при изменениях в продукте.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Требования к входу (Entry Criteria)?</div>
+<div class="answer">Требования к входу (Entry Criteria) — условия, которые должны быть выполнены перед началом тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Требования к выходу (Exit Criteria)?</div>
+<div class="answer">Требования к выходу (Exit Criteria) — условия, которые должны быть выполнены для завершения тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Повторяемость тестов (Test Reproducibility)?</div>
+<div class="answer">Повторяемость тестов (Test Reproducibility) — способность получить одинаковый результат при повторном выполнении теста.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование граничных значений (Boundary Value Analysis)?</div>
+<div class="answer">Тестирование граничных значений (Boundary Value Analysis) — метод тестирования, при котором проверяются значения на границах допустимых диапазонов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Эквивалентное разделение (Equivalence Partitioning)?</div>
+<div class="answer">Эквивалентное разделение (Equivalence Partitioning) — метод тестирования, при котором входные данные делятся на классы эквивалентности.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Предположение об ошибках (Error Guessing)?</div>
+<div class="answer">Предположение об ошибках (Error Guessing) — метод тестирования, при котором тестировщик предполагает возможные ошибки и создает тест-кейсы для их проверки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Таблица решений (Decision Table Testing)?</div>
+<div class="answer">Таблица решений (Decision Table Testing) — метод тестирования, основанный на анализе таблиц решений, где определяются правила и условия.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование переходов состояний (State Transition Testing)?</div>
+<div class="answer">Тестирование переходов состояний (State Transition Testing) — метод тестирования, при котором проверяются переходы между состояниями системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование пользовательских историй (User Story Testing)?</div>
+<div class="answer">Тестирование пользовательских историй (User Story Testing) — тестирование функциональности, описанной в пользовательских историях.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование API (API Testing)?</div>
+<div class="answer">Тестирование API (API Testing) — проверка корректности работы программных интерфейсов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование базы данных (Database Testing)?</div>
+<div class="answer">Тестирование базы данных (Database Testing) — проверка корректности работы с данными в базе данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование мобильных приложений (Mobile Testing)?</div>
+<div class="answer">Тестирование мобильных приложений (Mobile Testing) — проверка работоспособности мобильных приложений на разных устройствах и платформах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование пользовательского интерфейса (UI Testing)?</div>
+<div class="answer">Тестирование пользовательского интерфейса (UI Testing) — проверка корректности работы графического интерфейса.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование производительности базы данных (Database Performance Testing)?</div>
+<div class="answer">Тестирование производительности базы данных (Database Performance Testing) — проверка скорости и эффективности работы с базой данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование безопасности сети (Network Security Testing)?</div>
+<div class="answer">Тестирование безопасности сети (Network Security Testing) — проверка защиты сети от угроз.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование взаимодействия систем (System Integration Testing)?</div>
+<div class="answer">Тестирование взаимодействия систем (System Integration Testing) — проверка корректности взаимодействия между компонентами системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления (Recovery Testing)?</div>
+<div class="answer">Тестирование восстановления (Recovery Testing) — проверка способности системы восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование международизации (Internationalization Testing)?</div>
+<div class="answer">Тестирование международизации (Internationalization Testing) — проверка возможности использования продукта в разных языковых和地区ных настройках.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование локализации (Localization Testing)?</div>
+<div class="answer">Тестирование локализации (Localization Testing) — проверка адаптации продукта для конкретного региона или языка.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование установки (Installation Testing)?</div>
+<div class="answer">Тестирование установки (Installation Testing) — проверка корректности процесса установки продукта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование документации (Documentation Testing)?</div>
+<div class="answer">Тестирование документации (Documentation Testing) — проверка корректности和技术ности документации продукта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование воспроизводимости (Reproducibility Testing)?</div>
+<div class="answer">Тестирование воспроизводимости (Reproducibility Testing) — проверка возможности воспроизведения тестов с одинаковыми результатами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование отказоустойчивости (Fault Tolerance Testing)?</div>
+<div class="answer">Тестирование отказоустойчивости (Fault Tolerance Testing) — проверка способности системы продолжать работу при возникновении ошибок.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления данных (Data Recovery Testing)?</div>
+<div class="answer">Тестирование восстановления данных (Data Recovery Testing) — проверка способности системы восстанавливать данные после сбоя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование совместимости версий (Version Compatibility Testing)?</div>
+<div class="answer">Тестирование совместимости версий (Version Compatibility Testing) — проверка работоспособности продукта с разными версиями зависимых компонентов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование обратной совместимости (Backward Compatibility Testing)?</div>
+<div class="answer">Тестирование обратной совместимости (Backward Compatibility Testing) — проверка работоспособности продукта с более старыми версиями зависимых компонентов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование масштабируемости (Scalability Testing)?</div>
+<div class="answer">Тестирование масштабируемости (Scalability Testing) — проверка способности системы работать с увеличением нагрузки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после сбоев (Failover Testing)?</div>
+<div class="answer">Тестирование восстановления после сбоев (Failover Testing) — проверка способности системы автоматически восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления данных (Data Integrity Testing)?</div>
+<div class="answer">Тестирование восстановления данных (Data Integrity Testing) — проверка целостности данных после различных операций.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование резервного копирования (Backup Testing)?</div>
+<div class="answer">Тестирование резервного копирования (Backup Testing) — проверка корректности создания и восстановления резервных копий.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после аварий (Disaster Recovery Testing)?</div>
+<div class="answer">Тестирование восстановления после аварий (Disaster Recovery Testing) — проверка плана восстановления системы после серьезных сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование производительности сети (Network Performance Testing)?</div>
+<div class="answer">Тестирование производительности сети (Network Performance Testing) — проверка скорости и эффективности работы сети.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование юридического соответствия (Compliance Testing)?</div>
+<div class="answer">Тестирование юридического соответствия (Compliance Testing) — проверка соответствия продукта законодательным требованиям.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование отказоустойчивости сети (Network Resilience Testing)?</div>
+<div class="answer">Тестирование отказоустойчивости сети (Network Resilience Testing) — проверка способности сети восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование готовности к использованию (Readiness Testing)?</div>
+<div class="answer">Тестирование готовности к использованию (Readiness Testing) — проверка готовности продукта к выпуску.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование миграции данных (Data Migration Testing)?</div>
+<div class="answer">Тестирование миграции данных (Data Migration Testing) — проверка корректности перемещения данных между системами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование конфигурации (Configuration Testing)?</div>
+<div class="answer">Тестирование конфигурации (Configuration Testing) — проверка работоспособности продукта с различными конфигурациями.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления (Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления (Upgrade Testing) — проверка корректности обновления продукта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование отказоустойчивости оборудования (Hardware Fault Tolerance Testing)?</div>
+<div class="answer">Тестирование отказоустойчивости оборудования (Hardware Fault Tolerance Testing) — проверка способности системы работать при сбоях оборудования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование отказоустойчивости программного обеспечения (Software Fault Tolerance Testing)?</div>
+<div class="answer">Тестирование отказоустойчивости программного обеспечения (Software Fault Tolerance Testing) — проверка способности программы работать при сбоях ПО.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после катастроф (Disaster Recovery Testing)?</div>
+<div class="answer">Тестирование восстановления после катастроф (Disaster Recovery Testing) — проверка плана восстановления системы после серьезных сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование точности данных (Data Accuracy Testing)?</div>
+<div class="answer">Тестирование точности данных (Data Accuracy Testing) — проверка корректности хранения и обработки данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование резервных копий (Backup Testing)?</div>
+<div class="answer">Тестирование резервных копий (Backup Testing) — проверка корректности создания и восстановления резервных копий.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после сбоев (Resilience Testing)?</div>
+<div class="answer">Тестирование восстановления после сбоев (Resilience Testing) — проверка способности системы восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование производительности базы данных (Database Scalability Testing)?</div>
+<div class="answer">Тестирование производительности базы данных (Database Scalability Testing) — проверка способности базы данных работать с увеличением объема данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование производительности сети (Network Scalability Testing)?</div>
+<div class="answer">Тестирование производительности сети (Network Scalability Testing) — проверка способности сети работать с увеличением нагрузки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после сбоев сети (Network Failover Testing)?</div>
+<div class="answer">Тестирование восстановления после сбоев сети (Network Failover Testing) — проверка способности сети восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после сбоев базы данных (Database Failover Testing)?</div>
+<div class="answer">Тестирование восстановления после сбоев базы данных (Database Failover Testing) — проверка способности базы данных восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после сбоев приложения (Application Failover Testing)?</div>
+<div class="answer">Тестирование восстановления после сбоев приложения (Application Failover Testing) — проверка способности приложения восстанавливаться после сбоев.</div>
+</div>
+
+<!-- Блок 2: Техники тест-дизайна -->
+<!-- Блок: Техники тест-дизайна -->
+<h2>Техники тест-дизайна</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Вопросы</div>
+<div class="answer">
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование граничных значений (Boundary Value Analysis)?</div>
+<div class="answer">Тестирование граничных значений (Boundary Value Analysis) — метод тестирования, при котором проверяются значения на границах допустимых диапазонов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования граничных значений (Boundary Value Analysis)?</div>
+<div class="answer">Поле "Возраст" принимает значения от 18 до 99. Проверяем: 17, 18, 19, 98, 99, 100.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Эквивалентное разделение (Equivalence Partitioning)?</div>
+<div class="answer">Эквивалентное разделение (Equivalence Partitioning) — метод тестирования, при котором входные данные делятся на классы эквивалентности.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Эквивалентного разделения (Equivalence Partitioning)?</div>
+<div class="answer">Поле "Email" делится на два класса: корректные email-адреса и некорректные email-адреса.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Предположение об ошибках (Error Guessing)?</div>
+<div class="answer">Предположение об ошибках (Error Guessing) — метод тестирования, при котором тестировщик предполагает возможные ошибки и создает тест-кейсы для их проверки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Предположения об ошибках (Error Guessing)?</div>
+<div class="answer">Ввод специальных символов в поле "Имя", чтобы проверить защиту от XSS-атак.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Таблица решений (Decision Table Testing)?</div>
+<div class="answer">Таблица решений (Decision Table Testing) — метод тестирования, основанный на анализе таблиц решений, где определяются правила и условия.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Таблицы решений (Decision Table Testing)?</div>
+<div class="answer">Создание таблицы для проверки различных комбинаций условий в форме авторизации (например, правильный логин/пароль, неправильный логин/правильный пароль).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование переходов состояний (State Transition Testing)?</div>
+<div class="answer">Тестирование переходов состояний (State Transition Testing) — метод тестирования, при котором проверяются переходы между состояниями системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования переходов состояний (State Transition Testing)?</div>
+<div class="answer">Проверка автоматического перевода статуса заказа из "Новый" в "Обрабатывается" после подтверждения оплаты.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование путей выполнения (Path Testing)?</div>
+<div class="answer">Тестирование путей выполнения (Path Testing) — метод тестирования, при котором проверяются различные пути выполнения кода.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования путей выполнения (Path Testing)?</div>
+<div class="answer">Проверка всех возможных путей выполнения функции расчета стоимости заказа в зависимости от условий (например, скидки, налоги).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе использования (Use Case Testing)?</div>
+<div class="answer">Тестирование на основе использования (Use Case Testing) — метод тестирования, при котором создаются тест-кейсы на основе пользовательских сценариев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе использования (Use Case Testing)?</div>
+<div class="answer">Проверка сценария покупки товара через форму оформления заказа.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе модели (Model-Based Testing)?</div>
+<div class="answer">Тестирование на основе модели (Model-Based Testing) — метод тестирования, при котором тесты создаются на основе моделей системы (например, диаграмм состояний).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе модели (Model-Based Testing)?</div>
+<div class="answer">Проверка работы банковского приложения на основе UML-диаграммы процесса транзакции.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе анализа рисков (Risk-Based Testing)?</div>
+<div class="answer">Тестирование на основе анализа рисков (Risk-Based Testing) — метод тестирования, при котором приоритет отдается областям с высоким риском.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе анализа рисков (Risk-Based Testing)?</div>
+<div class="answer">При тестировании платежной системы больше внимания уделяется безопасности транзакций.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе данных (Data-Driven Testing)?</div>
+<div class="answer">Тестирование на основе данных (Data-Driven Testing) — метод тестирования, при котором тесты выполняются с использованием разных наборов данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе данных (Data-Driven Testing)?</div>
+<div class="answer">Проверка формы входа с разными комбинациями логинов и паролей (правильные, неправильные).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе ключевых слов (Keyword-Driven Testing)?</div>
+<div class="answer">Тестирование на основе ключевых слов (Keyword-Driven Testing) — метод тестирования, при котором действия описываются ключевыми словами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе ключевых слов (Keyword-Driven Testing)?</div>
+<div class="answer">Описание теста как последовательности ключевых слов: "Открыть_форму", "Ввести_логин", "Ввести_пароль", "Нажать_вход".</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе графов (Graph-Based Testing)?</div>
+<div class="answer">Тестирование на основе графов (Graph-Based Testing) — метод тестирования, при котором система представляется в виде графа, а тесты проверяют его пути.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе графов (Graph-Based Testing)?</div>
+<div class="answer">Построение графа переходов между страницами веб-сайта и проверка всех возможных маршрутов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия решений (Decision Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия решений (Decision Coverage) — метод тестирования, при котором проверяются все возможные результаты условий.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия решений (Decision Coverage)?</div>
+<div class="answer">Проверка всех ветвлений в коде функции, которая определяет тип пользователя (например, администратор или普通 пользователь).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия условий (Condition Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия условий (Condition Coverage) — метод тестирования, при котором проверяются все условия в коде.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия условий (Condition Coverage)?</div>
+<div class="answer">Проверка условий в коде проверки возраста пользователя (например, старше 18 лет, младше 18 лет).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия путей (Path Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия путей (Path Coverage) — метод тестирования, при котором проверяются все возможные пути выполнения кода.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия путей (Path Coverage)?</div>
+<div class="answer">Проверка всех путей выполнения функции расчета стоимости заказа с учетом скидок и налогов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия операторов (Statement Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия операторов (Statement Coverage) — метод тестирования, при котором проверяется выполнение каждой строки кода.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия операторов (Statement Coverage)?</div>
+<div class="answer">Проверка того, что каждая строка кода функции была выполнена хотя бы один раз.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия ветвлений (Branch Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия ветвлений (Branch Coverage) — метод тестирования, при котором проверяются все ветви условий.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия ветвлений (Branch Coverage)?</div>
+<div class="answer">Проверка всех ветвей в коде проверки авторизации (например, если логин верный, если пароль верный).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия условий-решений (Condition/Decision Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия условий-решений (Condition/Decision Coverage) — метод тестирования, при котором проверяются все условия и их влияние на решения.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия условий-решений (Condition/Decision Coverage)?</div>
+<div class="answer">Проверка всех комбинаций условий в коде проверки доступа к ресурсам.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия множественных условий (Multiple Condition Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия множественных условий (Multiple Condition Coverage) — метод тестирования, при котором проверяются все возможные комбинации условий.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия множественных условий (Multiple Condition Coverage)?</div>
+<div class="answer">Проверка всех комбинаций условий в коде проверки доступа к системе (например, логин + пароль + капча).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия вызовов функций (Function Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия вызовов функций (Function Coverage) — метод тестирования, при котором проверяется вызов каждой функции.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия вызовов функций (Function Coverage)?</div>
+<div class="answer">Проверка того, что все функции модуля были вызваны хотя бы один раз.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия интерфейсов (Interface Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия интерфейсов (Interface Coverage) — метод тестирования, при котором проверяется взаимодействие между компонентами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия интерфейсов (Interface Coverage)?</div>
+<div class="answer">Проверка взаимодействия между модулем аутентификации и модулем профиля пользователя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия утверждений (Assertion Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия утверждений (Assertion Coverage) — метод тестирования, при котором проверяются все утверждения в коде.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия утверждений (Assertion Coverage)?</div>
+<div class="answer">Проверка всех утверждений в коде функции проверки данных пользователя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия ветвлений-условий (Branch Condition Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия ветвлений-условий (Branch Condition Coverage) — метод тестирования, при котором проверяются все ветви и условия.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия ветвлений-условий (Branch Condition Coverage)?</div>
+<div class="answer">Проверка всех ветвей и условий в коде проверки доступа к файлам.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия путей-ветвлений (Path Branch Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия путей-ветвлений (Path Branch Coverage) — метод тестирования, при котором проверяются все пути и ветви.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия путей-ветвлений (Path Branch Coverage)?</div>
+<div class="answer">Проверка всех путей и ветвлений в коде обработки платежей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия исключений (Exception Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия исключений (Exception Coverage) — метод тестирования, при котором проверяются все возможные исключения.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия исключений (Exception Coverage)?</div>
+<div class="answer">Проверка обработки исключений при попытке записи в защищенный файл.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия циклов (Loop Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия циклов (Loop Coverage) — метод тестирования, при котором проверяются все возможные итерации циклов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия циклов (Loop Coverage)?</div>
+<div class="answer">Проверка цикла обработки элементов списка: пустой список, один элемент, несколько элементов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия переменных (Variable Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия переменных (Variable Coverage) — метод тестирования, при котором проверяется использование всех переменных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия переменных (Variable Coverage)?</div>
+<div class="answer">Проверка того, что все переменные функции были инициализированы и использованы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия точек входа (Entry Point Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия точек входа (Entry Point Coverage) — метод тестирования, при котором проверяется вызов всех точек входа.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия точек входа (Entry Point Coverage)?</div>
+<div class="answer">Проверка вызова всех методов класса управления пользователем.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия выходов (Exit Point Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия выходов (Exit Point Coverage) — метод тестирования, при котором проверяется выполнение всех точек выхода.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия выходов (Exit Point Coverage)?</div>
+<div class="answer">Проверка всех возможных точек выхода из функции обработки ошибок.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия инструкций (Instruction Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия инструкций (Instruction Coverage) — метод тестирования, при котором проверяется выполнение каждой инструкции кода.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия инструкций (Instruction Coverage)?</div>
+<div class="answer">Проверка того, что каждая инструкция в методе была выполнена хотя бы один раз.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия вызовов методов (Method Call Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия вызовов методов (Method Call Coverage) — метод тестирования, при котором проверяется вызов всех методов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия вызовов методов (Method Call Coverage)?</div>
+<div class="answer">Проверка вызова всех методов класса управления базой данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия объектов (Object Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия объектов (Object Coverage) — метод тестирования, при котором проверяется использование всех объектов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия объектов (Object Coverage)?</div>
+<div class="answer">Проверка создания и использования всех объектов класса управления сессиями.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия классов (Class Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия классов (Class Coverage) — метод тестирования, при котором проверяется использование всех классов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия классов (Class Coverage)?</div>
+<div class="answer">Проверка использования всех классов модуля обработки платежей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия интерфейсов классов (Class Interface Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия интерфейсов классов (Class Interface Coverage) — метод тестирования, при котором проверяется использование всех методов интерфейса.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия интерфейсов классов (Class Interface Coverage)?</div>
+<div class="answer">Проверка вызова всех методов интерфейса управления пользователем.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия атрибутов классов (Class Attribute Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия атрибутов классов (Class Attribute Coverage) — метод тестирования, при котором проверяется использование всех атрибутов класса.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия атрибутов классов (Class Attribute Coverage)?</div>
+<div class="answer">Проверка использования всех атрибутов класса пользователя (например, имя, email, телефон).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия событий (Event Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия событий (Event Coverage) — метод тестирования, при котором проверяется обработка всех событий.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия событий (Event Coverage)?</div>
+<div class="answer">Проверка обработки всех событий кнопки "Сохранить" (нажатие, двойное нажатие, длительное нажатие).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия сообщений (Message Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия сообщений (Message Coverage) — метод тестирования, при котором проверяется отправка и получение всех сообщений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия сообщений (Message Coverage)?</div>
+<div class="answer">Проверка отправки и получения всех типов сообщений в чате (текст, изображения, файлы).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия запросов (Request Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия запросов (Request Coverage) — метод тестирования, при котором проверяется обработка всех запросов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия запросов (Request Coverage)?</div>
+<div class="answer">Проверка обработки всех типов HTTP-запросов (GET, POST, PUT, DELETE).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия ответов (Response Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия ответов (Response Coverage) — метод тестирования, при котором проверяется корректность всех ответов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия ответов (Response Coverage)?</div>
+<div class="answer">Проверка всех возможных ответов сервера на запросы (например, коды состояния HTTP: 200, 404, 500).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия протоколов (Protocol Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия протоколов (Protocol Coverage) — метод тестирования, при котором проверяется соблюдение протоколов связи.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия протоколов (Protocol Coverage)?</div>
+<div class="answer">Проверка соблюдения протокола HTTPS при передаче данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия сетей (Network Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия сетей (Network Coverage) — метод тестирования, при котором проверяется работа с различными сетевыми условиями.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия сетей (Network Coverage)?</div>
+<div class="answer">Проверка работы приложения при медленном интернет-соединении, отсутствии сети или переключении между Wi-Fi и мобильным интернетом.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия устройств (Device Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия устройств (Device Coverage) — метод тестирования, при котором проверяется работа на разных устройствах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия устройств (Device Coverage)?</div>
+<div class="answer">Проверка работы мобильного приложения на iPhone, Android-устройствах и планшетах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия браузеров (Browser Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия браузеров (Browser Coverage) — метод тестирования, при котором проверяется работоспособность веб-приложения в разных браузерах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия браузеров (Browser Coverage)?</div>
+<div class="answer">Проверка работы веб-сайта в Chrome, Firefox, Safari и Edge.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия операционных систем (OS Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия операционных систем (OS Coverage) — метод тестирования, при котором проверяется работа приложения на разных ОС.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия операционных систем (OS Coverage)?</div>
+<div class="answer">Проверка работы приложения на Windows, macOS, Linux.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия языков (Language Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия языков (Language Coverage) — метод тестирования, при котором проверяется поддержка разных языков.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия языков (Language Coverage)?</div>
+<div class="answer">Проверка корректности отображения текстов на русском, английском и немецком языках.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия регионов (Region Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия регионов (Region Coverage) — метод тестирования, при котором проверяется адаптация под разные регионы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия регионов (Region Coverage)?</div>
+<div class="answer">Проверка формата даты, времени и валюты для разных стран (например, США, Россия, Германия).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия временных зон (Time Zone Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия временных зон (Time Zone Coverage) — метод тестирования, при котором проверяется корректность работы с разными временными зонами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия временных зон (Time Zone Coverage)?</div>
+<div class="answer">Проверка отображения времени события в разных временных зонах (например, UTC+3, UTC-5).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия локалей (Locale Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия локалей (Locale Coverage) — метод тестирования, при котором проверяется поддержка разных локалей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия локалей (Locale Coverage)?</div>
+<div class="answer">Проверка формата чисел и дат для разных локалей (например, точки vs запятые в числах).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия производительности (Performance Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия производительности (Performance Coverage) — метод тестирования, при котором проверяется производительность при разных нагрузках.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия производительности (Performance Coverage)?</div>
+<div class="answer">Проверка времени загрузки страницы при 100 одновременных пользователях.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия безопасности (Security Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия безопасности (Security Coverage) — метод тестирования, при котором проверяется безопасность приложения.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия безопасности (Security Coverage)?</div>
+<div class="answer">Проверка защиты от SQL-инъекций и XSS-атак.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия совместимости (Compatibility Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия совместимости (Compatibility Coverage) — метод тестирования, при котором проверяется совместимость с разными платформами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия совместимости (Compatibility Coverage)?</div>
+<div class="answer">Проверка работы приложения на разных версиях iOS и Android.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия конфигураций (Configuration Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия конфигураций (Configuration Coverage) — метод тестирования, при котором проверяется работа с разными конфигурациями.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия конфигураций (Configuration Coverage)?</div>
+<div class="answer">Проверка работы приложения с разными настройками экрана (разрешение, ориентация).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия параметров (Parameter Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия параметров (Parameter Coverage) — метод тестирования, при котором проверяются все возможные значения параметров.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия параметров (Parameter Coverage)?</div>
+<div class="answer">Проверка всех возможных значений фильтров в поиске товаров (цена, категория, рейтинг).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия алгоритмов (Algorithm Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия алгоритмов (Algorithm Coverage) — метод тестирования, при котором проверяется корректность работы алгоритмов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия алгоритмов (Algorithm Coverage)?</div>
+<div class="answer">Проверка алгоритма сортировки товаров по цене (возрастание, убывание, случайный порядок).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия данных (Data Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия данных (Data Coverage) — метод тестирования, при котором проверяется корректность работы с разными данными.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия данных (Data Coverage)?</div>
+<div class="answer">Проверка работы с большими, маленькими и пустыми наборами данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия ошибок (Error Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия ошибок (Error Coverage) — метод тестирования, при котором проверяются все возможные ошибки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия ошибок (Error Coverage)?</div>
+<div class="answer">Проверка обработки ошибок при недоступности сервера или базы данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия исключений (Exception Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия исключений (Exception Coverage) — метод тестирования, при котором проверяются все возможные исключения.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования на основе покрытия исключений (Exception Coverage)?</div>
+<div class="answer">Проверка обработки исключений при попытке записи в защищенный файл.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование на основе покрытия потока данных (Data Flow Coverage)?</div>
+<div class="answer">Тестирование на основе покрытия потока данных (Data Flow Coverage) — метод тестирования, при котором проверяется движение данных через систему.</div>
+
+</div>
+
+<!-- Блок 3: Методы тестирования -->
+<h2>Методы тестирования</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Вопросы</div>
+<div class="answer">
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Функциональное тестирование (Functional Testing)?</div>
+<div class="answer">Функциональное тестирование (Functional Testing) — проверка того, что система выполняет свои функции в соответствии с требованиями.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Функционального тестирования (Functional Testing)?</div>
+<div class="answer">Проверка формы входа: ввод правильных логина/пароля должен привести к успешной авторизации.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Нефункциональное тестирование (Non-functional Testing)?</div>
+<div class="answer">Нефункциональное тестирование (Non-functional Testing) — проверка характеристик системы, таких как производительность, безопасность, совместимость.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Нефункционального тестирования (Non-functional Testing)?</div>
+<div class="answer">Проверка времени отклика сервера при обработке запросов пользователей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Ручное тестирование (Manual Testing)?</div>
+<div class="answer">Ручное тестирование (Manual Testing) — тестирование, проводимое вручную без использования автоматизации.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Ручного тестирования (Manual Testing)?</div>
+<div class="answer">Проверка корректности работы кнопки "Забыли пароль" на сайте.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Автоматизированное тестирование (Automation Testing)?</div>
+<div class="answer">Автоматизированное тестирование (Automation Testing) — тестирование, проводимое с помощью специальных инструментов и скриптов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Автоматизированного тестирования (Automation Testing)?</div>
+<div class="answer">Использование Selenium для автоматического тестирования процесса регистрации пользователя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Регрессионное тестирование (Regression Testing)?</div>
+<div class="answer">Регрессионное тестирование (Regression Testing) — повторное тестирование после внесения изменений для проверки отсутствия новых ошибок.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Регрессионного тестирования (Regression Testing)?</div>
+<div class="answer">Проверка основных функций сайта после обновления кода базового модуля.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Нагрузочное тестирование (Load Testing)?</div>
+<div class="answer">Нагрузочное тестирование (Load Testing) — проверка работы системы под высокой нагрузкой.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Нагрузочного тестирования (Load Testing)?</div>
+<div class="answer">Эмуляция 1000 одновременных пользователей на сайте для проверки времени отклика.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Стрессовое тестирование (Stress Testing)?</div>
+<div class="answer">Стрессовое тестирование (Stress Testing) — проверка поведения системы в экстремальных условиях (например, при перегрузке).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Стрессового тестирования (Stress Testing)?</div>
+<div class="answer">Эмуляция 5000 одновременных пользователей для проверки отказоустойчивости системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование производительности (Performance Testing)?</div>
+<div class="answer">Тестирование производительности (Performance Testing) — проверка скорости, стабильности и эффективности работы системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования производительности (Performance Testing)?</div>
+<div class="answer">Проверка времени загрузки страницы при различных уровнях нагрузки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование безопасности (Security Testing)?</div>
+<div class="answer">Тестирование безопасности (Security Testing) — проверка защиты системы от угроз (например, SQL-инъекций, XSS).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования безопасности (Security Testing)?</div>
+<div class="answer">Проверка защиты формы входа от атак методом подбора паролей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование удобства использования (Usability Testing)?</div>
+<div class="answer">Тестирование удобства использования (Usability Testing) — проверка удобства использования продукта для конечных пользователей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования удобства использования (Usability Testing)?</div>
+<div class="answer">Оценка удобства навигации по сайту реальными пользователями.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование совместимости (Compatibility Testing)?</div>
+<div class="answer">Тестирование совместимости (Compatibility Testing) — проверка работоспособности системы на разных платформах, устройствах и версиях ПО.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования совместимости (Compatibility Testing)?</div>
+<div class="answer">Проверка работы веб-сайта в браузерах Chrome, Firefox, Safari.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Кросс-браузерное тестирование (Cross-browser Testing)?</div>
+<div class="answer">Кросс-браузерное тестирование (Cross-browser Testing) — проверка работоспособности веб-приложения в разных браузерах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Кросс-браузерного тестирования (Cross-browser Testing)?</div>
+<div class="answer">Проверка отображения формы заказа в Chrome, Firefox, Edge.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Кросс-платформенное тестирование (Cross-platform Testing)?</div>
+<div class="answer">Кросс-платформенное тестирование (Cross-platform Testing) — проверка работоспособности приложения на разных операционных системах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Кросс-платформенного тестирования (Cross-platform Testing)?</div>
+<div class="answer">Проверка мобильного приложения на iOS и Android.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления (Recovery Testing)?</div>
+<div class="answer">Тестирование восстановления (Recovery Testing) — проверка способности системы восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления (Recovery Testing)?</div>
+<div class="answer">Проверка восстановления данных после внезапного отключения сервера.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование международизации (Internationalization Testing)?</div>
+<div class="answer">Тестирование международизации (Internationalization Testing) — проверка возможности использования продукта в разных языковых和地区ных настройках.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования международизации (Internationalization Testing)?</div>
+<div class="answer">Проверка корректности отображения даты в формате DD/MM/YYYY и MM/DD/YYYY.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование локализации (Localization Testing)?</div>
+<div class="answer">Тестирование локализации (Localization Testing) — проверка адаптации продукта для конкретного региона или языка.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования локализации (Localization Testing)?</div>
+<div class="answer">Проверка перевода интерфейса на русский язык для российских пользователей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование установки (Installation Testing)?</div>
+<div class="answer">Тестирование установки (Installation Testing) — проверка корректности процесса установки продукта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования установки (Installation Testing)?</div>
+<div class="answer">Проверка установки программы на Windows 10, macOS, Linux.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование документации (Documentation Testing)?</div>
+<div class="answer">Тестирование документации (Documentation Testing) — проверка корректности和技术ности документации продукта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования документации (Documentation Testing)?</div>
+<div class="answer">Проверка соответствия инструкции по установке фактическому процессу.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование воспроизводимости (Reproducibility Testing)?</div>
+<div class="answer">Тестирование воспроизводимости (Reproducibility Testing) — проверка возможности получения одинаковых результатов при повторном выполнении теста.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования воспроизводимости (Reproducibility Testing)?</div>
+<div class="answer">Повторное выполнение теста на форму входа с одинаковыми входными данными.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование отказоустойчивости (Fault Tolerance Testing)?</div>
+<div class="answer">Тестирование отказоустойчивости (Fault Tolerance Testing) — проверка способности системы продолжать работу при возникновении ошибок.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования отказоустойчивости (Fault Tolerance Testing)?</div>
+<div class="answer">Проверка работы приложения при временной потере соединения с сервером.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления данных (Data Recovery Testing)?</div>
+<div class="answer">Тестирование восстановления данных (Data Recovery Testing) — проверка способности системы восстанавливать данные после сбоя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления данных (Data Recovery Testing)?</div>
+<div class="answer">Проверка восстановления базы данных после сбоя сервера.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование масштабируемости (Scalability Testing)?</div>
+<div class="answer">Тестирование масштабируемости (Scalability Testing) — проверка способности системы работать с увеличением нагрузки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования масштабируемости (Scalability Testing)?</div>
+<div class="answer">Проверка работы системы при увеличении числа одновременных пользователей с 100 до 1000.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после сбоев (Failover Testing)?</div>
+<div class="answer">Тестирование восстановления после сбоев (Failover Testing) — проверка способности системы автоматически восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после сбоев (Failover Testing)?</div>
+<div class="answer">Проверка переключения на резервный сервер при выходе из строя основного.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование точности данных (Data Accuracy Testing)?</div>
+<div class="answer">Тестирование точности данных (Data Accuracy Testing) — проверка корректности хранения и обработки данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования точности данных (Data Accuracy Testing)?</div>
+<div class="answer">Проверка корректности расчета стоимости заказа с учетом налогов и скидок.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование резервного копирования (Backup Testing)?</div>
+<div class="answer">Тестирование резервного копирования (Backup Testing) — проверка корректности создания и восстановления резервных копий.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования резервного копирования (Backup Testing)?</div>
+<div class="answer">Проверка создания резервной копии базы данных и её восстановления.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после аварий (Disaster Recovery Testing)?</div>
+<div class="answer">Тестирование восстановления после аварий (Disaster Recovery Testing) — проверка плана восстановления системы после серьезных сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после аварий (Disaster Recovery Testing)?</div>
+<div class="answer">Проверка восстановления системы после полного отключения сервера.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование производительности сети (Network Performance Testing)?</div>
+<div class="answer">Тестирование производительности сети (Network Performance Testing) — проверка скорости и эффективности работы сети.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования производительности сети (Network Performance Testing)?</div>
+<div class="answer">Проверка времени передачи данных между серверами при медленном интернете.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование юридического соответствия (Compliance Testing)?</div>
+<div class="answer">Тестирование юридического соответствия (Compliance Testing) — проверка соответствия продукта законодательным требованиям.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования юридического соответствия (Compliance Testing)?</div>
+<div class="answer">Проверка соответствия платежной системы стандартам PCI DSS.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование отказоустойчивости сети (Network Resilience Testing)?</div>
+<div class="answer">Тестирование отказоустойчивости сети (Network Resilience Testing) — проверка способности сети восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования отказоустойчивости сети (Network Resilience Testing)?</div>
+<div class="answer">Проверка переключения между Wi-Fi и мобильным интернетом во время видеозвонка.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование готовности к использованию (Readiness Testing)?</div>
+<div class="answer">Тестирование готовности к использованию (Readiness Testing) — проверка готовности продукта к выпуску.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования готовности к использованию (Readiness Testing)?</div>
+<div class="answer">Проверка всех ключевых функций перед запуском нового релиза.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование миграции данных (Data Migration Testing)?</div>
+<div class="answer">Тестирование миграции данных (Data Migration Testing) — проверка корректности перемещения данных между системами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования миграции данных (Data Migration Testing)?</div>
+<div class="answer">Проверка переноса данных с одной версии базы данных на другую.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование конфигурации (Configuration Testing)?</div>
+<div class="answer">Тестирование конфигурации (Configuration Testing) — проверка работоспособности продукта с различными конфигурациями.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования конфигурации (Configuration Testing)?</div>
+<div class="answer">Проверка работы приложения с разрешением экрана 1920x1080 и 1366x768.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления (Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления (Upgrade Testing) — проверка корректности обновления продукта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления (Upgrade Testing)?</div>
+<div class="answer">Проверка обновления мобильного приложения с версии 1.0 на версию 2.0.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование отказоустойчивости оборудования (Hardware Fault Tolerance Testing)?</div>
+<div class="answer">Тестирование отказоустойчивости оборудования (Hardware Fault Tolerance Testing) — проверка способности системы работать при сбоях оборудования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования отказоустойчивости оборудования (Hardware Fault Tolerance Testing)?</div>
+<div class="answer">Проверка работы сервера при отказе одного из дисков RAID-массива.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование отказоустойчивости программного обеспечения (Software Fault Tolerance Testing)?</div>
+<div class="answer">Тестирование отказоустойчивости программного обеспечения (Software Fault Tolerance Testing) — проверка способности программы работать при сбоях ПО.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования отказоустойчивости программного обеспечения (Software Fault Tolerance Testing)?</div>
+<div class="answer">Проверка работы приложения при внезапном завершении работы одного из компонентов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после катастроф (Disaster Recovery Testing)?</div>
+<div class="answer">Тестирование восстановления после катастроф (Disaster Recovery Testing) — проверка плана восстановления системы после серьезных сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после катастроф (Disaster Recovery Testing)?</div>
+<div class="answer">Проверка восстановления системы после полного отключения электропитания.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование точности данных (Data Integrity Testing)?</div>
+<div class="answer">Тестирование точности данных (Data Integrity Testing) — проверка целостности данных после различных операций.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования точности данных (Data Integrity Testing)?</div>
+<div class="answer">Проверка сохранности данных после обновления записи в базе данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование резервного копирования (Backup Testing)?</div>
+<div class="answer">Тестирование резервного копирования (Backup Testing) — проверка корректности создания и восстановления резервных копий.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования резервного копирования (Backup Testing)?</div>
+<div class="answer">Проверка создания резервной копии базы данных и её восстановления.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование производительности базы данных (Database Performance Testing)?</div>
+<div class="answer">Тестирование производительности базы данных (Database Performance Testing) — проверка скорости и эффективности работы с базой данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования производительности базы данных (Database Performance Testing)?</div>
+<div class="answer">Проверка времени выполнения сложных SQL-запросов при большой нагрузке.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование безопасности сети (Network Security Testing)?</div>
+<div class="answer">Тестирование безопасности сети (Network Security Testing) — проверка защиты сети от угроз.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования безопасности сети (Network Security Testing)?</div>
+<div class="answer">Проверка защиты от MITM-атак при передаче данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование взаимодействия систем (System Integration Testing)?</div>
+<div class="answer">Тестирование взаимодействия систем (System Integration Testing) — проверка корректности взаимодействия между компонентами системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования взаимодействия систем (System Integration Testing)?</div>
+<div class="answer">Проверка обмена данными между модулем оплаты и модулем доставки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование пользовательского интерфейса (UI Testing)?</div>
+<div class="answer">Тестирование пользовательского интерфейса (UI Testing) — проверка корректности работы графического интерфейса.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования пользовательского интерфейса (UI Testing)?</div>
+<div class="answer">Проверка отображения кнопки "Купить" на разных разрешениях экрана.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование API (API Testing)?</div>
+<div class="answer">Тестирование API (API Testing) — проверка корректности работы программных интерфейсов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования API (API Testing)?</div>
+<div class="answer">Проверка корректности ответа API при запросе списка товаров.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование базы данных (Database Testing)?</div>
+<div class="answer">Тестирование базы данных (Database Testing) — проверка корректности работы с данными в базе данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования базы данных (Database Testing)?</div>
+<div class="answer">Проверка корректности записи и чтения данных из таблицы пользователей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование мобильных приложений (Mobile Testing)?</div>
+<div class="answer">Тестирование мобильных приложений (Mobile Testing) — проверка работоспособности мобильных приложений на разных устройствах и платформах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования мобильных приложений (Mobile Testing)?</div>
+<div class="answer">Проверка работы приложения на iPhone и Samsung Galaxy.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование производительности базы данных (Database Scalability Testing)?</div>
+<div class="answer">Тестирование производительности базы данных (Database Scalability Testing) — проверка способности базы данных работать с увеличением объема данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования производительности базы данных (Database Scalability Testing)?</div>
+<div class="answer">Проверка работы базы данных при добавлении миллиона записей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование производительности сети (Network Scalability Testing)?</div>
+<div class="answer">Тестирование производительности сети (Network Scalability Testing) — проверка способности сети работать с увеличением нагрузки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования производительности сети (Network Scalability Testing)?</div>
+<div class="answer">Проверка работы сети при увеличении числа подключенных устройств.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после сбоев сети (Network Failover Testing)?</div>
+<div class="answer">Тестирование восстановления после сбоев сети (Network Failover Testing) — проверка способности сети восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после сбоев сети (Network Failover Testing)?</div>
+<div class="answer">Проверка автоматического переключения на резервный канал связи при обрыве основного.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после сбоев базы данных (Database Failover Testing)?</div>
+<div class="answer">Тестирование восстановления после сбоев базы данных (Database Failover Testing) — проверка способности базы данных восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после сбоев базы данных (Database Failover Testing)?</div>
+<div class="answer">Проверка автоматического переключения на резервную базу данных при сбое основной.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после сбоев приложения (Application Failover Testing)?</div>
+<div class="answer">Тестирование восстановления после сбоев приложения (Application Failover Testing) — проверка способности приложения восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после сбоев приложения (Application Failover Testing)?</div>
+<div class="answer">Проверка восстановления состояния приложения после его неожиданного закрытия.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование точности вычислений (Calculation Accuracy Testing)?</div>
+<div class="answer">Тестирование точности вычислений (Calculation Accuracy Testing) — проверка корректности математических вычислений в программе.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования точности вычислений (Calculation Accuracy Testing)?</div>
+<div class="answer">Проверка точности расчета налога на основе дохода пользователя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления данных (Data Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления данных (Data Upgrade Testing) — проверка корректности обновления данных при переходе на новую версию.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления данных (Data Upgrade Testing)?</div>
+<div class="answer">Проверка обновления базы данных при переходе с версии 1.0 на версию 2.0.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления системы (System Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления системы (System Upgrade Testing) — проверка корректности обновления всей системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления системы (System Upgrade Testing)?</div>
+<div class="answer">Проверка обновления операционной системы сервера и корректности работы приложения.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления конфигурации (Configuration Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления конфигурации (Configuration Upgrade Testing) — проверка корректности обновления конфигурационных файлов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления конфигурации (Configuration Upgrade Testing)?</div>
+<div class="answer">Проверка обновления конфигурации веб-сервера и корректности работы приложения.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления протоколов (Protocol Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления протоколов (Protocol Upgrade Testing) — проверка корректности работы с новыми версиями протоколов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления протоколов (Protocol Upgrade Testing)?</div>
+<div class="answer">Проверка работы приложения с обновленным протоколом HTTPS.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления плагинов (Plugin Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления плагинов (Plugin Upgrade Testing) — проверка корректности работы с обновленными плагинами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления плагинов (Plugin Upgrade Testing)?</div>
+<div class="answer">Проверка работы веб-сайта после обновления плагина для обработки платежей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления зависимостей (Dependency Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления зависимостей (Dependency Upgrade Testing) — проверка корректности работы с обновленными зависимостями.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления зависимостей (Dependency Upgrade Testing)?</div>
+<div class="answer">Проверка работы приложения после обновления библиотеки для работы с базой данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления API (API Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления API (API Upgrade Testing) — проверка корректности работы с обновленными API.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления API (API Upgrade Testing)?</div>
+<div class="answer">Проверка работы клиента после обновления API сервера.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления базы данных (Database Schema Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления базы данных (Database Schema Upgrade Testing) — проверка корректности обновления структуры базы данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления базы данных (Database Schema Upgrade Testing)?</div>
+<div class="answer">Проверка обновления таблиц базы данных при переходе на новую версию.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления ядра (Core Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления ядра (Core Upgrade Testing) — проверка корректности работы с обновленным ядром системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления ядра (Core Upgrade Testing)?</div>
+<div class="answer">Проверка работы операционной системы после обновления ядра Linux.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления сетевых параметров (Network Configuration Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления сетевых параметров (Network Configuration Upgrade Testing) — проверка корректности работы с обновленными сетевыми настройками.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления сетевых параметров (Network Configuration Upgrade Testing)?</div>
+<div class="answer">Проверка работы сервера после изменения сетевых параметров (IP-адрес, порты).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления безопасности (Security Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления безопасности (Security Upgrade Testing) — проверка корректности работы с обновленными механизмами безопасности.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления безопасности (Security Upgrade Testing)?</div>
+<div class="answer">Проверка работы приложения после внедрения двухфакторной аутентификации.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления пользовательского интерфейса (UI Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления пользовательского интерфейса (UI Upgrade Testing) — проверка корректности работы нового интерфейса.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления пользовательского интерфейса (UI Upgrade Testing)?</div>
+<div class="answer">Проверка работы нового дизайна формы входа.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование восстановления после обновления бизнес-логики (Business Logic Upgrade Testing)?</div>
+<div class="answer">Тестирование восстановления после обновления бизнес-логики (Business Logic Upgrade Testing) — проверка корректности работы обновленной бизнес-логики.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Тестирования восстановления после обновления бизнес-логики (Business Logic Upgrade Testing)?</div>
+<div class="answer">Проверка обновленного алгоритма расчета стоимости заказа.</div>
+
+
+</div>
+<!-- Блок 4: Баг-репорты и документация -->
+<h2>Баг-репорты и документация</h2>
+<div class="question" onclick="toggleAnswer(this)">Вопросы</div>
+<div class="answer">
+<div class="question" onclick="toggleAnswer(this)">Что такое Баг-репорт (Bug Report)?</div>
+<div class="answer">Баг-репорт (Bug Report) — документ, описывающий найденный дефект, включая шаги воспроизведения, фактический и ожидаемый результаты.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Какие элементы должны быть в Баг-репорте (Bug Report)?</div>
+<div class="answer">ID бага, описание, предусловия, шаги воспроизведения, фактический результат, ожидаемый результат, окружение, уровень критичности.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тест-план (Test Plan)?</div>
+<div class="answer">Тест-план (Test Plan) — документ, содержащий описание цели, области покрытия, рисков, ресурсов и сроков тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример структуры Тест-плана (Test Plan)?</div>
+<div class="answer">Введение, область покрытия, входные/выходные критерии, стратегия тестирования, распределение задач, риски.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тест-кейс (Test Case)?</div>
+<div class="answer">Тест-кейс (Test Case) — набор шагов, входных данных и ожидаемых результатов для проверки конкретной функции.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример структуры Тест-кейса (Test Case)?</div>
+<div class="answer">ID, название, предусловия, шаги, входные данные, ожидаемый результат.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Чек-лист (Checklist)?</div>
+<div class="answer">Чек-лист (Checklist) — список проверок, который помогает быстро протестировать основные функции системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Чем Чек-лист (Checklist) отличается от Тест-кейса (Test Case)?</div>
+<div class="answer">Чек-лист менее детализирован, чем тест-кейс, и используется для быстрого тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Матрица трассировки (Traceability Matrix)?</div>
+<div class="answer">Матрица трассировки (Traceability Matrix) — таблица, связывающая требования с тест-кейсами для оценки покрытия.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Матрицы трассировки (Traceability Matrix)?</div>
+<div class="answer">Проверка того, что каждое требование покрыто хотя бы одним тест-кейсом.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Отчет о тестировании (Test Report)?</div>
+<div class="answer">Отчет о тестировании (Test Report) — документ, описывающий результаты тестирования и выводы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример содержания Отчета о тестировании (Test Report)?</div>
+<div class="answer">Общее количество тестов, количество пройденных/не пройденных тестов, выявленные баги, рекомендации.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестовая среда (Test Environment)?</div>
+<div class="answer">Тестовая среда (Test Environment) — среда, где проводится тестирование (например, тестовый сервер, базы данных).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестовой среды (Test Environment)?</div>
+<div class="answer">Сервер с ОС Linux, база данных MySQL, приложение развернуто на Tomcat.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестовые данные (Test Data)?</div>
+<div class="answer">Тестовые данные (Test Data) — данные, используемые для тестирования (например, входные параметры, начальные состояния).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестовых данных (Test Data)?</div>
+<div class="answer">Логин: test_user, пароль: password123, email: test@example.com.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Артефакты тестирования (Test Artifacts)?</div>
+<div class="answer">Артефакты тестирования (Test Artifacts) — любой документ или файл, созданный во время тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Артефактов тестирования (Test Artifacts)?</div>
+<div class="answer">Тест-кейсы, баг-репорты, отчеты о тестировании.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Входные критерии (Entry Criteria)?</div>
+<div class="answer">Входные критерии (Entry Criteria) — условия, которые должны быть выполнены перед началом тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Входных критериев (Entry Criteria)?</div>
+<div class="answer">Должен быть готовый билд продукта, тестовая среда должна быть настроена.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Выходные критерии (Exit Criteria)?</div>
+<div class="answer">Выходные критерии (Exit Criteria) — условия, которые должны быть выполнены для завершения тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Выходных критериев (Exit Criteria)?</div>
+<div class="answer">Не должно быть блокирующих багов, все ключевые функции протестированы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Test Design Document (TDD)?</div>
+<div class="answer">Test Design Document (TDD) — документ, описывающий стратегию и подходы к проектированию тестов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример содержания Test Design Document (TDD)?</div>
+<div class="answer">Описание используемых техник тест-дизайна, методов тестирования, инструментов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Test Strategy Document (TSD)?</div>
+<div class="answer">Test Strategy Document (TSD) — документ, описывающий общий подход к тестированию на уровне проекта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример содержания Test Strategy Document (TSD)?</div>
+<div class="answer">Цели тестирования, типы тестирования, инструменты автоматизации, риски.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Test Closure Report?</div>
+<div class="answer">Test Closure Report — отчет, описывающий результаты тестирования и выводы по его завершении.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример содержания Test Closure Report?</div>
+<div class="answer">Общее количество тестов, количество найденных/исправленных багов, рекомендации для будущих релизов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Test Metrics?</div>
+<div class="answer">Test Metrics — метрики, используемые для оценки качества тестирования (например, покрытие кода, количество багов).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Test Metrics?</div>
+<div class="answer">Процент выполненных тест-кейсов, среднее время жизни бага, плотность дефектов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Test Deliverables?</div>
+<div class="answer">Test Deliverables — артефакты, создаваемые во время тестирования (например, тест-кейсы, баг-репорты).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Test Deliverables?</div>
+<div class="answer">Набор тест-кейсов, отчет о тестировании, баг-репорты.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Test Log?</div>
+<div class="answer">Test Log — журнал, содержащий информацию о выполненных тестах и их результатах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Test Log?</div>
+<div class="answer">Дата и время выполнения теста, ID теста, результат (Pass/Fail), комментарии.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что должно быть в баг-репорте?</div>
+<div class="answer">ID бага, описание, предусловия, шаги воспроизведения, фактический результат, ожидаемый результат, окружение, уровень критичности.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример баг-репорта?</div>
+<div class="answer">ID: BUG_001, Описание: "Неверный формат даты", Предусловия: "Открыта страница профиля", Шаги: "1. Открыть форму изменения данных. 2. Ввести дату '31.02.2023'.", ФР: "Сообщение об ошибке не выводится.", ОР: "Должно быть сообщение 'Неверная дата'."</div>
+
+</div>
+
+<!-- Блок 5: Автоматизация тестирования -->
+<h2>Автоматизация тестирования</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Вопросы</div>
+<div class="answer">
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Автоматизация тестирования (Automation Testing)?</div>
+<div class="answer">Автоматизация тестирования (Automation Testing) — тестирование, проводимое с помощью специальных инструментов и скриптов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Зачем нужна Автоматизация тестирования (Automation Testing)?</div>
+<div class="answer">Для увеличения скорости и точности тестирования, особенно для повторяющихся задач.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Selenium?</div>
+<div class="answer">Selenium — инструмент для автоматизации тестирования веб-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Selenium?</div>
+<div class="answer">Автоматическое тестирование процесса регистрации пользователя на сайте.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Cypress?</div>
+<div class="answer">Cypress — современный инструмент для автоматизации тестирования веб-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Cypress?</div>
+<div class="answer">Автоматическое тестирование взаимодействия с компонентами React-приложения.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое JUnit?</div>
+<div class="answer">JUnit — фреймворк для написания unit-тестов на Java.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования JUnit?</div>
+<div class="answer">Тестирование корректности работы метода расчета стоимости заказа.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое PyTest?</div>
+<div class="answer">PyTest — фреймворк для написания тестов на Python.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования PyTest?</div>
+<div class="answer">Тестирование API с использованием модуля requests.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TestNG?</div>
+<div class="answer">TestNG — фреймворк для написания тестов на Java, аналог JUnit.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования TestNG?</div>
+<div class="answer">Тестирование последовательности действий в веб-приложении с использованием аннотаций @Before и @After.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое BDD (Behavior Driven Development)?</div>
+<div class="answer">BDD (Behavior Driven Development) — методология разработки, основанная на описании поведения системы через примеры.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования BDD?</div>
+<div class="answer">Использование Gherkin-синтаксиса для описания сценариев тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TDD (Test Driven Development)?</div>
+<div class="answer">TDD (Test Driven Development) — методология разработки, при которой сначала пишутся тесты, а затем код.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования TDD?</div>
+<div class="answer">Написание unit-теста для метода, прежде чем реализовать сам метод.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое CI/CD?</div>
+<div class="answer">CI/CD — Continuous Integration/Continuous Deployment, процессы автоматической сборки и деплоя приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример CI/CD?</div>
+<div class="answer">Автоматическая сборка проекта после каждого коммита в Git и запуск тестов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Robot Framework?</div>
+<div class="answer">Robot Framework — универсальный инструмент для автоматизации тестирования, поддерживающий keyword-driven подход.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Robot Framework?</div>
+<div class="answer">Автоматическое тестирование процесса авторизации с использованием ключевых слов Login и Verify.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Postman?</div>
+<div class="answer">Postman — инструмент для тестирования API.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Postman?</div>
+<div class="answer">Тестирование GET-запроса к API для получения списка пользователей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое JMeter?</div>
+<div class="answer">JMeter — инструмент для нагрузочного тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования JMeter?</div>
+<div class="answer">Эмуляция 1000 одновременных пользователей для проверки производительности веб-сервера.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Allure Report?</div>
+<div class="answer">Allure Report — инструмент для создания красивых отчетов о результатах автоматизированных тестов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Allure Report?</div>
+<div class="answer">Генерация отчета о覆盖率 тестов и времени их выполнения.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Page Object Model (POM)?</div>
+<div class="answer">Page Object Model (POM) — паттерн проектирования для организации автоматизированных тестов веб-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования POM?</div>
+<div class="answer">Создание классов для каждой страницы веб-сайта с методами для взаимодействия с элементами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Data-Driven Testing?</div>
+<div class="answer">Data-Driven Testing — метод тестирования, при котором тесты выполняются с использованием разных наборов данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Data-Driven Testing?</div>
+<div class="answer">Тестирование формы входа с разными комбинациями логинов и паролей из CSV-файла.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Keyword-Driven Testing?</div>
+<div class="answer">Keyword-Driven Testing — метод тестирования, при котором действия описываются ключевыми словами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Keyword-Driven Testing?</div>
+<div class="answer">Описание теста как последовательности ключевых слов: Open_Browser, Enter_Login, Enter_Password, Click_Login_Button.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Automation Framework?</div>
+<div class="answer">Automation Framework — набор инструментов и практик, используемых для организации автоматизации тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Automation Framework?</div>
+<div class="answer">Фреймворк на основе Selenium с использованием POM и Data-Driven подхода.</div>
+
+</div>
+
+<!-- Блок 6: Тестирование безопасности -->
+<h2>Тестирование безопасности</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Вопросы</div>
+<div class="answer">
+
+<div class="question" onclick="toggleAnswer(this)">Что такое SQL-инъекция (SQL Injection)?</div>
+<div class="answer">SQL-инъекция (SQL Injection) — атака, при которой злоумышленник вводит вредоносный SQL-код через пользовательский ввод.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример защиты от SQL-инъекции (SQL Injection)?</div>
+<div class="answer">Использование параметризованных запросов или ORM-фреймворков.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое XSS-атака (Cross-Site Scripting)?</div>
+<div class="answer">XSS-атака (Cross-Site Scripting) — атака, при которой злоумышленник внедряет вредоносный JavaScript-код в веб-страницу.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример защиты от XSS-атак (Cross-Site Scripting)?</div>
+<div class="answer">Экранирование специальных символов в пользовательском вводе.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое CSRF-атака (Cross-Site Request Forgery)?</div>
+<div class="answer">CSRF-атака (Cross-Site Request Forgery) — атака, при которой злоумышленник заставляет пользователя выполнить нежелательное действие.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример защиты от CSRF-атак (Cross-Site Request Forgery)?</div>
+<div class="answer">Использование токенов CSRF для подтверждения подлинности запросов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое OWASP Top 10?</div>
+<div class="answer">OWASP Top 10 — список наиболее распространенных уязвимостей веб-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример из OWASP Top 10?</div>
+<div class="answer">SQL-инъекции (SQL Injection), XSS-атаки (Cross-Site Scripting), неудачная аутентификация (Broken Authentication).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Пентестинг (Penetration Testing)?</div>
+<div class="answer">Пентестинг (Penetration Testing) — тестирование системы на уязвимости с целью имитации атаки хакера.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Пентестинга (Penetration Testing)?</div>
+<div class="answer">Попытка получить доступ к закрытому разделу сайта без авторизации.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Аудит безопасности (Security Audit)?</div>
+<div class="answer">Аудит безопасности (Security Audit) — проверка безопасности системы с целью выявления уязвимостей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Аудита безопасности (Security Audit)?</div>
+<div class="answer">Анализ кода на наличие незащищенных точек входа.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Шифрование данных (Encryption)?</div>
+<div class="answer">Шифрование данных (Encryption) — шифрование данных для защиты от несанкционированного доступа.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Шифрования данных (Encryption)?</div>
+<div class="answer">Шифрование паролей пользователей с использованием алгоритма AES.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Аутентификация (Authentication)?</div>
+<div class="answer">Аутентификация (Authentication) — процесс подтверждения личности пользователя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Аутентификации (Authentication)?</div>
+<div class="answer">Проверка правильности логина/пароля при авторизации.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Авторизация (Authorization)?</div>
+<div class="answer">Авторизация (Authorization) — процесс определения прав доступа пользователя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Авторизации (Authorization)?</div>
+<div class="answer">Проверка того, что администратор может видеть закрытые разделы, а обычный пользователь — нет.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Аутентификация по токенам (Token-Based Authentication)?</div>
+<div class="answer">Аутентификация по токенам (Token-Based Authentication) — аутентификация с использованием двух факторов (например, пароль + SMS-код).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Аутентификации по токенам (Token-Based Authentication)?</div>
+<div class="answer">Авторизация пользователя с помощью пароля и кода из Google Authenticator.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое SSL/TLS?</div>
+<div class="answer">SSL/TLS — протоколы шифрования данных при передаче между клиентом и сервером.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования SSL/TLS?</div>
+<div class="answer">Защита данных при передаче через HTTPS.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Двухфакторная аутентификация (Two-Factor Authentication, 2FA)?</div>
+<div class="answer">Двухфакторная аутентификация (Two-Factor Authentication, 2FA) — аутентификация с использованием двух факторов (например, пароль + SMS-код).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Двухфакторной аутентификации (Two-Factor Authentication, 2FA)?</div>
+<div class="answer">Авторизация пользователя с помощью пароля и одноразового кода из SMS.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Анализ уязвимостей (Vulnerability Assessment)?</div>
+<div class="answer">Анализ уязвимостей (Vulnerability Assessment) — анализ системы на наличие уязвимостей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Анализа уязвимостей (Vulnerability Assessment)?</div>
+<div class="answer">Использование инструмента Burp Suite для анализа безопасности веб-сайта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Безопасное программирование (Secure Coding)?</div>
+<div class="answer">Безопасное программирование (Secure Coding) — практика написания безопасного кода.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Безопасного программирования (Secure Coding)?</div>
+<div class="answer">Использование Prepared Statements для защиты от SQL-инъекций.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Неправильная конфигурация безопасности (Security Misconfiguration)?</div>
+<div class="answer">Неправильная конфигурация безопасности (Security Misconfiguration) — неправильная настройка системы, которая может привести к уязвимостям.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Неправильной конфигурации безопасности (Security Misconfiguration)?</div>
+<div class="answer">Отсутствие HTTPS на сайте с личными данными пользователей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Раскрытие чувствительных данных (Sensitive Data Exposure)?</div>
+<div class="answer">Раскрытие чувствительных данных (Sensitive Data Exposure) — уязвимость, при которой данные становятся доступны злоумышленнику.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Раскрытия чувствительных данных (Sensitive Data Exposure)?</div>
+<div class="answer">Отображение пароля пользователя в открытом виде в логах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Сломанная аутентификация (Broken Authentication)?</div>
+<div class="answer">Сломанная аутентификация (Broken Authentication) — уязвимость, связанная с небезопасной реализацией механизма аутентификации.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Сломанной аутентификации (Broken Authentication)?</div>
+<div class="answer">Возможность перехвата сессионного токена через незащищенное соединение.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Инъекции (Injection)?</div>
+<div class="answer">Инъекции (Injection) — класс уязвимостей, при которых ввод пользователя исполняется как часть кода.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Инъекций (Injection)?</div>
+<div class="answer">Ввод SQL-запроса через форму поиска на сайте.</div>
+
+</div>
+
+<!-- Блок 7: Тестирование производительности -->
+<h2>Тестирование производительности</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Вопросы</div>
+<div class="answer">
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование производительности (Performance Testing)?</div>
+<div class="answer">Тестирование производительности (Performance Testing) — проверка скорости, стабильности и эффективности работы системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестирования производительности (Performance Testing)?</div>
+<div class="answer">Проверка времени загрузки главной страницы при 1000 одновременных пользователей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Нагрузочное тестирование (Load Testing)?</div>
+<div class="answer">Нагрузочное тестирование (Load Testing) — проверка работы системы под высокой нагрузкой.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Нагрузочного тестирования (Load Testing)?</div>
+<div class="answer">Эмуляция 5000 одновременных пользователей для проверки стабильности сервера.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Стрессовое тестирование (Stress Testing)?</div>
+<div class="answer">Стрессовое тестирование (Stress Testing) — проверка поведения системы в экстремальных условиях (например, при перегрузке).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Стрессового тестирования (Stress Testing)?</div>
+<div class="answer">Проверка работы системы при 10 000 одновременных запросов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование масштабируемости (Scalability Testing)?</div>
+<div class="answer">Тестирование масштабируемости (Scalability Testing) — проверка способности системы работать с увеличением нагрузки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестирования масштабируемости (Scalability Testing)?</div>
+<div class="answer">Проверка работы системы при увеличении числа пользователей с 100 до 1000.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование долговечности (Endurance Testing)?</div>
+<div class="answer">Тестирование долговечности (Endurance Testing) — проверка работоспособности системы под длительной нагрузкой.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестирования долговечности (Endurance Testing)?</div>
+<div class="answer">Проверка работы сервера в течение 24 часов под постоянной нагрузкой.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование пиков нагрузки (Spike Testing)?</div>
+<div class="answer">Тестирование пиков нагрузки (Spike Testing) — проверка реакции системы на резкие изменения нагрузки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестирования пиков нагрузки (Spike Testing)?</div>
+<div class="answer">Эмуляция резкого увеличения числа пользователей с 100 до 5000 за 1 минуту.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Сохранение состояния (Soak Testing)?</div>
+<div class="answer">Сохранение состояния (Soak Testing) — проверка системы на предмет утечек памяти или других проблем при длительной работе.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Сохранения состояния (Soak Testing)?</div>
+<div class="answer">Проверка работы сервера в течение недели под средней нагрузкой.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Базовое тестирование производительности (Baseline Performance Testing)?</div>
+<div class="answer">Базовое тестирование производительности (Baseline Performance Testing) — установление базового уровня производительности системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Базового тестирования производительности (Baseline Performance Testing)?</div>
+<div class="answer">Измерение времени загрузки страницы при минимальной нагрузке.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Бенчмарк-тестирование (Benchmark Testing)?</div>
+<div class="answer">Бенчмарк-тестирование (Benchmark Testing) — сравнение производительности системы с известными эталонами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Бенчмарк-тестирования (Benchmark Testing)?</div>
+<div class="answer">Сравнение времени обработки запросов нового сервера с существующим.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Конкурентное тестирование (Concurrency Testing)?</div>
+<div class="answer">Конкурентное тестирование (Concurrency Testing) — проверка работы системы при одновременном выполнении нескольких операций.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Конкурентного тестирования (Concurrency Testing)?</div>
+<div class="answer">Проверка работы банковской системы при одновременных транзакциях.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Восстановление после сбоев (Recovery Testing)?</div>
+<div class="answer">Восстановление после сбоев (Recovery Testing) — проверка способности системы восстанавливаться после сбоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Восстановления после сбоев (Recovery Testing)?</div>
+<div class="answer">Проверка восстановления сервера после внезапного отключения электропитания.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование емкости (Capacity Testing)?</div>
+<div class="answer">Тестирование емкости (Capacity Testing) — проверка максимальной емкости системы.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестирования емкости (Capacity Testing)?</div>
+<div class="answer">Определение максимального числа одновременных пользователей, которое может обработать система.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование надежности (Reliability Testing)?</div>
+<div class="answer">Тестирование надежности (Reliability Testing) — проверка работоспособности системы в течение длительного времени.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестирования надежности (Reliability Testing)?</div>
+<div class="answer">Проверка работоспособности системы в течение месяца без простоев.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование использования ресурсов (Resource Utilization Testing)?</div>
+<div class="answer">Тестирование использования ресурсов (Resource Utilization Testing) — проверка использования ресурсов системы (CPU, RAM, дисковое пространство).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестирования использования ресурсов (Resource Utilization Testing)?</div>
+<div class="answer">Измерение потребления CPU сервера при обработке запросов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование времени отклика (Response Time Testing)?</div>
+<div class="answer">Тестирование времени отклика (Response Time Testing) — проверка времени, необходимого системе для ответа на запрос.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестирования времени отклика (Response Time Testing)?</div>
+<div class="answer">Измерение времени загрузки страницы при различных уровнях нагрузки.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование пропускной способности (Throughput Testing)?</div>
+<div class="answer">Тестирование пропускной способности (Throughput Testing) — проверка количества обработанных запросов в секунду.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестирования пропускной способности (Throughput Testing)?</div>
+<div class="answer">Измерение количества обработанных запросов в секунду при 1000 одновременных пользователях.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Тестирование задержки (Latency Testing)?</div>
+<div class="answer">Тестирование задержки (Latency Testing) — проверка времени между отправкой запроса и получением ответа.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Тестирования задержки (Latency Testing)?</div>
+<div class="answer">Измерение времени между отправкой запроса и получением ответа от сервера.</div>
+</div>
+
+<!-- Блок 8: Agile-практики -->
+<h2>Agile-практики</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Вопросы</div>
+<div class="answer">
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Agile?</div>
+<div class="answer">Agile — гибкая методология разработки, основанная на итеративном подходе.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Scrum?</div>
+<div class="answer">Scrum — методология управления проектами, основанная на коротких спринтах (обычно 2 недели).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Scrum-процесса?</div>
+<div class="answer">Создание бэклога → Планирование спринта → Ежедневные встречи → Демонстрация результатов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Kanban?</div>
+<div class="answer">Kanban — методология управления проектами, основанная на потоке задач.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Kanban-процесса?</div>
+<div class="answer">Использование доски задач для отслеживания статуса каждой задачи.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Юзер-стори (User Story)?</div>
+<div class="answer">Юзер-стори (User Story) — описание функциональности с точки зрения пользователя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Юзер-стори (User Story)?</div>
+<div class="answer">Как пользователь, я хочу иметь возможность сбросить пароль, чтобы восстановить доступ к аккаунту.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Спринт (Sprint)?</div>
+<div class="answer">Спринт (Sprint) — короткий временной интервал (обычно 1–4 недели), в течение которого выполняется работа над задачами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Спринта (Sprint)?</div>
+<div class="answer">Разработка и тестирование функции восстановления пароля за 2 недели.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Бэклог (Backlog)?</div>
+<div class="answer">Бэклог (Backlog) — список задач, которые нужно выполнить в проекте.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Бэклога (Backlog)?</div>
+<div class="answer">Список функций, включающий регистрацию, авторизацию и восстановление пароля.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Ежедневная встреча (Daily Standup)?</div>
+<div class="answer">Ежедневная встреча (Daily Standup) — короткая встреча команды для обсуждения прогресса и проблем.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Ежедневной встречи (Daily Standup)?</div>
+<div class="answer">Обсуждение выполненных задач, планов на день и возможных препятствий.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Ретроспектива (Retrospective)?</div>
+<div class="answer">Ретроспектива (Retrospective) — встреча после завершения спринта для анализа процесса.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Ретроспективы (Retrospective)?</div>
+<div class="answer">Обсуждение того, что удалось сделать хорошо, что можно улучшить, и какие проблемы возникли.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Планирование спринта (Sprint Planning)?</div>
+<div class="answer">Планирование спринта (Sprint Planning) — встреча для определения задач текущего спринта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Планирования спринта (Sprint Planning)?</div>
+<div class="answer">Выбор задач из бэклога для реализации в следующем спринте.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Демонстрация результатов (Sprint Review)?</div>
+<div class="answer">Демонстрация результатов (Sprint Review) — встреча для демонстрации результатов спринта заказчику.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Демонстрации результатов (Sprint Review)?</div>
+<div class="answer">Показ новой функции восстановления пароля заказчику.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Пользовательские истории (User Stories)?</div>
+<div class="answer">Пользовательские истории (User Stories) — описание требований с точки зрения пользователя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Пользовательских историй (User Stories)?</div>
+<div class="answer">Как пользователь, я хочу иметь возможность сбросить пароль, чтобы восстановить доступ к аккаунту.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Эпик (Epic)?</div>
+<div class="answer">Эпик (Epic) — большая пользовательская история, которая делится на несколько smaller задач.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Эпика (Epic)?</div>
+<div class="answer">Эпик "Улучшение безопасности": включает задачи по добавлению двухфакторной аутентификации и шифрованию данных.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое С STORY POINTS (Story Points)?</div>
+<div class="answer">Story Points — относительная оценка сложности задачи в Agile-проектах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Story Points?</div>
+<div class="answer">Оценка задачи "Добавить функцию восстановления пароля" в 5 story points.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Бёрндаун диаграмма (Burndown Chart)?</div>
+<div class="answer">Бёрндаун диаграмма (Burndown Chart) — график, показывающий оставшийся объем работы в спринте.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Бёрндаун диаграммы (Burndown Chart)?</div>
+<div class="answer">График, демонстрирующий уменьшение объема задач за время спринта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Валидация продукта (Product Validation)?</div>
+<div class="answer">Валидация продукта (Product Validation) — проверка того, что продукт удовлетворяет потребностям пользователя.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Валидации продукта (Product Validation)?</div>
+<div class="answer">Проверка того, что новая функция восстановления пароля удобна для пользователей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Верификация продукта (Product Verification)?</div>
+<div class="answer">Верификация продукта (Product Verification) — проверка соответствия продукта требованиям.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Верификации продукта (Product Verification)?</div>
+<div class="answer">Проверка того, что функция восстановления пароля работает согласно техническому заданию.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Инкремент (Increment)?</div>
+<div class="answer">Инкремент (Increment) — готовый и проверенный результат работы спринта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Инкремента (Increment)?</div>
+<div class="answer">Функция восстановления пароля, готовая к выпуску после завершения спринта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Product Owner?</div>
+<div class="answer">Product Owner — человек, ответственный за приоритизацию задач и представление интересов заказчика.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример роли Product Owner?</div>
+<div class="answer">Product Owner определяет, какие функции должны быть реализованы в следующем спринте.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Scrum Master?</div>
+<div class="answer">Scrum Master — человек, помогающий команде следовать процессам Scrum.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример роли Scrum Master?</div>
+<div class="answer">Scrum Master организует ежедневные встречи и устраняет препятствия для команды.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Sprint Goal?</div>
+<div class="answer">Sprint Goal — цель спринта, которую команда должна достичь.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Sprint Goal?</div>
+<div class="answer">Добавить функцию восстановления пароля и улучшить безопасность входа.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Definition of Done (DoD)?</div>
+<div class="answer">Definition of Done (DoD) — список критериев, которым должна соответствовать задача для считаться завершенной.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Definition of Done (DoD)?</div>
+<div class="answer">Задача считается завершенной, если она протестирована, документирована и готова к выпуску.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Velocity?</div>
+<div class="answer">Velocity — метрика, показывающая скорость выполнения задач командой за спринт.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример Velocity?</div>
+<div class="answer">Команда выполнила 30 story points за последний спринт.</div>
+
+</div>
+
+<!-- Блок 9: Инструменты тестирования -->
+<h2>Инструменты тестирования</h2>
+
+<div class="question" onclick="toggleAnswer(this)">Вопросы</div>
+<div class="answer">
+    
+<div class="question" onclick="toggleAnswer(this)">Что такое Jira?</div>
+<div class="answer">Jira — система управления задачами и проектами, часто используемая для трекинга багов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Jira?</div>
+<div class="answer">Создание задачи для исправления бага, назначение её разработчику, отслеживание прогресса.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TestRail?</div>
+<div class="answer">TestRail — инструмент для управления тест-кейсами и отчетностью.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования TestRail?</div>
+<div class="answer">Хранение и управление набором тест-кейсов для функционального тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Selenium?</div>
+<div class="answer">Selenium — инструмент для автоматизации тестирования веб-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Selenium?</div>
+<div class="answer">Автоматическое тестирование процесса регистрации пользователя на сайте.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Cypress?</div>
+<div class="answer">Cypress — современный инструмент для автоматизации тестирования веб-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Cypress?</div>
+<div class="answer">Автоматическое тестирование взаимодействия с компонентами React-приложения.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Postman?</div>
+<div class="answer">Postman — инструмент для тестирования API.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Postman?</div>
+<div class="answer">Тестирование GET-запроса к API для получения списка пользователей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое JMeter?</div>
+<div class="answer">JMeter — инструмент для нагрузочного тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования JMeter?</div>
+<div class="answer">Эмуляция 1000 одновременных пользователей для проверки производительности веб-сервера.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Allure Report?</div>
+<div class="answer">Allure Report — инструмент для создания красивых отчетов о результатах автоматизированных тестов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Allure Report?</div>
+<div class="answer">Генерация отчета о覆盖率 тестов и времени их выполнения.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Robot Framework?</div>
+<div class="answer">Robot Framework — универсальный инструмент для автоматизации тестирования, поддерживающий keyword-driven подход.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Robot Framework?</div>
+<div class="answer">Автоматическое тестирование процесса авторизации с использованием ключевых слов Login и Verify.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое PyTest?</div>
+<div class="answer">PyTest — фреймворк для написания тестов на Python.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования PyTest?</div>
+<div class="answer">Тестирование API с использованием модуля requests.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TestNG?</div>
+<div class="answer">TestNG — фреймворк для написания тестов на Java, аналог JUnit.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования TestNG?</div>
+<div class="answer">Тестирование последовательности действий в веб-приложении с использованием аннотаций @Before и @After.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Burp Suite?</div>
+<div class="answer">Burp Suite — инструмент для тестирования безопасности веб-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Burp Suite?</div>
+<div class="answer">Поиск уязвимостей XSS и SQL-инъекций на веб-сайте.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое OWASP ZAP?</div>
+<div class="answer">OWASP ZAP — инструмент для автоматического сканирования уязвимостей веб-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования OWASP ZAP?</div>
+<div class="answer">Сканирование веб-сайта на наличие уязвимостей XSS и CSRF.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое LoadRunner?</div>
+<div class="answer">LoadRunner — инструмент для нагрузочного тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования LoadRunner?</div>
+<div class="answer">Эмуляция 10 000 одновременных пользователей для проверки производительности веб-сайта.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Apache JMeter?</div>
+<div class="answer">Apache JMeter — инструмент для нагрузочного и функционального тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Apache JMeter?</div>
+<div class="answer">Тестирование производительности API с эмуляцией 500 пользователей.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Selenium WebDriver?</div>
+<div class="answer">Selenium WebDriver — компонент Selenium для автоматизации взаимодействия с веб-браузерами.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Selenium WebDriver?</div>
+<div class="answer">Автоматическое заполнение формы входа и проверка успешной авторизации.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TestComplete?</div>
+<div class="answer">TestComplete — инструмент для автоматизации тестирования desktop-, web- и mobile-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования TestComplete?</div>
+<div class="answer">Автоматическое тестирование процесса работы с desktop-приложением, например, проверка функциональности формы авторизации или взаимодействия с элементами интерфейса.</div>
+
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Katalon Studio?</div>
+<div class="answer">Katalon Studio — инструмент для автоматизации функционального и API-тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Katalon Studio?</div>
+<div class="answer">Автоматическое тестирование процесса оформления заказа на веб-сайте с использованием записи действий через GUI.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое SoapUI?</div>
+<div class="answer">SoapUI — инструмент для тестирования SOAP и RESTful API.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования SoapUI?</div>
+<div class="answer">Тестирование корректности ответов от API при различных входных данных, включая валидацию XML/JSON.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Appium?</div>
+<div class="answer">Appium — инструмент для автоматизации тестирования мобильных приложений (iOS и Android).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Appium?</div>
+<div class="answer">Автоматическое тестирование процесса регистрации в мобильном приложении с эмуляцией разных устройств.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое BrowserStack?</div>
+<div class="answer">BrowserStack — облачный сервис для кросс-браузерного и мобильного тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования BrowserStack?</div>
+<div class="answer">Проверка работоспособности веб-сайта на разных браузерах и мобильных устройствах без установки эмуляторов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TestLink?</div>
+<div class="answer">TestLink — система управления тест-кейсами для ручного и автоматизированного тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования TestLink?</div>
+<div class="answer">Создание, организация и отслеживание прогресса выполнения тест-кейсов для веб-приложения.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Zephyr?</div>
+<div class="answer">Zephyr — инструмент для управления тестированием, интегрируемый с Jira.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Zephyr?</div>
+<div class="answer">Связывание тест-кейсов с задачами в Jira и отслеживание их покрытия.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TestNG?</div>
+<div class="answer">TestNG — фреймворк для написания тестов на Java, аналог JUnit.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования TestNG?</div>
+<div class="answer">Тестирование последовательности действий в веб-приложении с использованием аннотаций @BeforeClass, @Test и @AfterClass.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое PyTest?</div>
+<div class="answer">PyTest — фреймворк для написания тестов на Python.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования PyTest?</div>
+<div class="answer">Тестирование бизнес-логики приложения с помощью утверждений assert для проверки ожидаемых результатов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TestRail?</div>
+<div class="answer">TestRail — инструмент для управления тест-кейсами и отчетностью.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования TestRail?</div>
+<div class="answer">Организация тест-кейсов по проектам, назначение их исполнителям и анализ результатов тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Ranorex?</div>
+<div class="answer">Ranorex — инструмент для автоматизации тестирования desktop-, web- и mobile-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Ranorex?</div>
+<div class="answer">Автоматическое тестирование процесса импорта данных в desktop-приложение с проверкой всех этапов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое UFT (Unified Functional Testing)?</div>
+<div class="answer">UFT (Unified Functional Testing) — инструмент для автоматизации функционального тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования UFT?</div>
+<div class="answer">Автоматическое тестирование процесса оплаты в веб-приложении с использованием записанных скриптов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Fiddler?</div>
+<div class="answer">Fiddler — инструмент для мониторинга и анализа HTTP-трафика.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Fiddler?</div>
+<div class="answer">Анализ запросов и ответов между веб-сайтом и сервером для выявления проблем с API.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Charles Proxy?</div>
+<div class="answer">Charles Proxy — инструмент для мониторинга и анализа сетевого трафика.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Charles Proxy?</div>
+<div class="answer">Перехват и модификация запросов для тестирования работы приложения в условиях медленного интернета.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Git?</div>
+<div class="answer">Git — распределенная система контроля версий для хранения кода и тестов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Git?</div>
+<div class="answer">Хранение автоматизированных тестов в репозитории и совместная работа над ними с командой разработчиков.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Jenkins?</div>
+<div class="answer">Jenkins — инструмент для непрерывной интеграции (CI) и развертывания (CD).</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Jenkins?</div>
+<div class="answer">Автоматический запуск тестов после каждого коммита в Git и формирование отчетов о覆盖率.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Docker?</div>
+<div class="answer">Docker — платформа для создания, деплоя и управления контейнерами приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Docker?</div>
+<div class="answer">Создание тестовой среды с предустановленными зависимостями для повторяемости тестов.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Selenium Grid?</div>
+<div class="answer">Selenium Grid — компонент Selenium для параллельного выполнения тестов на разных браузерах и операционных системах.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Selenium Grid?</div>
+<div class="answer">Запуск одного набора тестов одновременно на Chrome, Firefox и Safari для проверки кросс-браузерной совместимости.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Mocha?</div>
+<div class="answer">Mocha — фреймворк для написания unit-тестов на JavaScript.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Mocha?</div>
+<div class="answer">Тестирование методов обработки данных в Node.js-приложении.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Chai?</div>
+<div class="answer">Chai — библиотека для утверждений в тестах на JavaScript, часто используется вместе с Mocha.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Chai?</div>
+<div class="answer">Проверка корректности ответа API с помощью утверждений expect или should.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Cucumber?</div>
+<div class="answer">Cucumber — инструмент для行为 driven development (BDD), позволяющий писать тесты на языке Gherkin.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Cucumber?</div>
+<div class="answer">Написание тестов для процесса покупки товара с использованием ключевых слов Given, When, Then.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TestCafe?</div>
+<div class="answer">TestCafe — инструмент для автоматизации тестирования веб-приложений на JavaScript.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования TestCafe?</div>
+<div class="answer">Автоматическое тестирование процесса регистрации пользователя без необходимости настройки WebDriver.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое Xray?</div>
+<div class="answer">Xray — инструмент для управления тестированием, интегрируемый с Jira для BDD и автоматизированного тестирования.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования Xray?</div>
+<div class="answer">Выполнение BDD-тестов, написанных на Gherkin, и интеграция их результатов в Jira.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Что такое TestComplete?</div>
+<div class="answer">TestComplete — инструмент для автоматизации тестирования desktop-, web- и mobile-приложений.</div>
+
+<div class="question" onclick="toggleAnswer(this)">Пример использования TestComplete?</div>
+<div class="answer">Автоматическое тестирование процесса работы с desktop-приложением, например, проверка экспорта данных в Excel.</div>
+
+</div>
+
+
+
+<!-- JavaScript для показа/скрытия ответов -->
+<script>
+    function toggleAnswer(question) {
+        const answer = question.nextElementSibling;
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
